@@ -153,7 +153,9 @@
       <updated>1607475007838</updated>
       <workItem from="1607475008953" duration="1254000" />
       <workItem from="1607476341539" duration="8218000" />
-      <workItem from="1607490728245" duration="10333000" />
+      <workItem from="1607490728245" duration="11431000" />
+      <workItem from="1607579780254" duration="6992000" />
+      <workItem from="1607619045351" duration="6293000" />
     </task>
     <servers />
   </component>
@@ -161,14 +163,22 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="413" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607654265454">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="413" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.768@0.0.1366.768" timestamp="1607654265454" />
     <state x="184" y="29" key="SettingsEditor" timestamp="1607476250028">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="184" y="29" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1607476250028" />
-    <state x="0" y="144" width="583" height="624" key="find.popup" timestamp="1607488706577">
+    <state x="0" y="144" width="583" height="624" key="find.popup" timestamp="1607648365137">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="0" y="144" width="583" height="624" key="find.popup/0.0.1366.768@0.0.1366.768" timestamp="1607488706577" />
+    <state x="0" y="144" width="583" height="624" key="find.popup/0.0.1366.768@0.0.1366.768" timestamp="1607648365137" />
+    <state x="324" y="109" width="700" height="530" key="recent.locations.popup" timestamp="1607648364920">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="324" y="109" width="700" height="530" key="recent.locations.popup/0.0.1366.768@0.0.1366.768" timestamp="1607648364920" />
     <state x="335" y="210" key="run.anything.popup" timestamp="1607489280045">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
