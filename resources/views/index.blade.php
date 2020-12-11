@@ -1,6 +1,20 @@
 @extends('inc.navbar')
 @section('content')
 <div class="container " >
+    <div class="sort mt-5" style="color: #979BFF" >
+
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                Sort By
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+    </div>
 <div class="row">
 <div class="card-view bg-white shadow rounded-3 mx-auto" style="width: 200px; height: 267px; margin-top: 50px;">
     <div class="image-cover rounded-3 mx-auto mt-3 " style="padding: 2px; background-color: lightpink; width: auto; height: 120px;"></div>
