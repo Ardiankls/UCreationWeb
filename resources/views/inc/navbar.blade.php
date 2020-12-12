@@ -58,7 +58,7 @@
             </div>
         </div>
     </nav>
-    <img  class=" col-1 shadow rounded-3 float-end" src="img/blankprofile.png" style="width: 4em; height: 4em; margin-top: -4em; margin-right: 1em" >
+    <img  class=" col-1 shadow rounded-3 float-end" href="{{ route('login') }}" src="img/blankprofile.png" style="width: 4em; height: 4em; margin-top: -4em; margin-right: 1em" >
 </div>
 
 @yield('content')

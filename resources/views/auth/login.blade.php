@@ -9,7 +9,7 @@
         font-family: 'Raleway';
     }
 </style>
-<div class="container-fluid" style="background-color: blue; height: 100%;">
+<div class="container-fluid" style="background-color: #395AFF; height: 100%;">
     <div class="container">
 
         <div class="row ">
@@ -17,11 +17,11 @@
 
 
             </div>
-            <div class="col-3 ">
-                <div class="container card-login shadow rounded" style="background-color: white">
-                <h3>Welcome!</h3>
+            <div class="col-3 position-absolute top-50 end-0 translate-middle-y me-5" >
+                <div class="container card-login shadow  p-5 " style="background-color: white; border-radius: 20px;">
+                <h1 class="text-center  ">Welcome!</h1>
                 <form>
-                    <p>Email:</p>
+                    <p class="">Email:</p>
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Your Email *" value="" />
                     </div>
@@ -33,8 +33,8 @@
 
                         <a href="#" class="ForgetPwd" value="Login">Forget Password?</a>
                     </div>
-                    <div class="form-group mx-auto">
-                        <input type="submit" class="btnSubmit" value="Login" />
+                    <div class="form-group mx-auto text-center">
+                        <input type="submit" class="btn-lg btn-primary" value="LOGIN" />
                     </div>
                     <p>Don't have and account? <br> Create account </p>
                     <a href="#">Here!</a>
