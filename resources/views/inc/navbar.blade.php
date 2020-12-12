@@ -24,7 +24,7 @@
     </style>
 </head>
 
-<div class="container-fluid">
+<div class="container-fluid ">
     <nav class="navbar shadow col-11 navbar-expand-lg navbar-light bg-light rounded-3" style="margin-left: 1em; margin-top: 0.5em;  "  >
         <div class="container-fluid">
 
