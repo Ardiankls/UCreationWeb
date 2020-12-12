@@ -1,7 +1,7 @@
 @extends('inc.navbar')
 @section('content')
 <div class="container " >
-<div class="row">
+<div class="row ">
 <div class="card-view bg-white shadow rounded-3 mx-auto" style="width: 200px; height: 267px; margin-top: 50px;">
     <div class="image-cover rounded-3 mx-auto mt-3 " style="padding: 2px; background-color: lightpink; width: auto; height: 120px;"></div>
     <h1 class="title mx-auto text-center p-2 fs-4" style="color: #979BFF">Project Title</h1>
