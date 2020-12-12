@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Auth\loginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +17,6 @@ Route::get('/', function () {
 
     return view('index');
 });
-Route::view('login', function () {
-    return view('auth.login');
+Route::get('login', function () {
+    return redirect()->route('auth.login');
 });
