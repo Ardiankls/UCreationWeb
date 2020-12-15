@@ -15,8 +15,9 @@ use App\Http\Controllers\Auth\loginController;
 
 Route::get('/', function () {
 
-    return view('index');
+    return view('student.profile.detail');
 });
-Route::get('login', function () {
-    return redirect()->route('auth.login');
-});
+
+//Route::get('login', function () {
+//    return redirect()->route('auth.login');
+//});

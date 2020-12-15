@@ -44,21 +44,24 @@
                     <li class="nav-item btn   " style="background-color: #7965FF; margin-right: 1em ">
                         <a class="nav-link"  style="color: white;" href="#">About</a>
                     </li>
-                    {{--                <li class="nav-item dropdown">--}}
-                    {{--                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">--}}
-                    {{--                        Dropdown link--}}
-                    {{--                    </a>--}}
-                    {{--                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">--}}
-                    {{--                        <li><a class="dropdown-item" href="#">Action</a></li>--}}
-                    {{--                        <li><a class="dropdown-item" href="#">Another action</a></li>--}}
-                    {{--                        <li><a class="dropdown-item" href="#">Something else here</a></li>--}}
-                    {{--                    </ul>--}}
-                    {{--                </li>--}}
+
+                    {{--                                    <li class="nav-item dropdown">--}}
+                    {{--                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">--}}
+                    {{--                                            Dropdown link--}}
+                    {{--                                        </a>--}}
+                    {{--                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">--}}
+                    {{--                                                                <li><a class="dropdown-item" href="#">Action</a></li>--}}
+                    {{--                                            <li><a class="dropdown-item" href="#">Another action</a></li>--}}
+                    {{--                                            <li><a class="dropdown-item" href="#">Something else here</a></li>--}}
+                    {{--                                        </ul>--}}
+                    {{--                                    </li>--}}
+
                 </ul>
             </div>
         </div>
     </nav>
-    <img  class=" col-1 shadow rounded-3 float-end" href="{{ route('login') }}" src="img/blankprofile.png" style="width: 4em; height: 4em; margin-top: -4em; margin-right: 1em" >
+    {{--    href="{{ route('login') }}"--}}
+    <img  class=" col-1 shadow rounded-3 float-end"  src="img/blankprofile.png" style="width: 4em; height: 4em; margin-top: -4em; margin-right: 1em" >
 </div>
 
 @yield('content')
@@ -67,10 +70,9 @@
     <div class="shadow w-80 bg-white rounded-3">
         <div class="card-body bg-white">
 
-            <h5 class="card-title" style="color: #979BFF ">Card title</h5>
+            <h5 class="card-title" style="color: #979bff ">Card title</h5>
             <p class="card-text" style="color: #979BFF ">With supporting text below as a natural lead-in to additional content.</p>
             {{--        <a href="#" class="btn btn-primary">Button</a>--}}
         </div>
     </div>
 </div>
-
