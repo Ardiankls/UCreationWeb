@@ -13,7 +13,7 @@ class CreateCourseYearLecturersTable extends Migration
      */
     public function up()
     {
-        Schema::create('course_year_lecturers', function (Blueprint $table) {
+        Schema::create('ucr_course_year_lecturers', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });

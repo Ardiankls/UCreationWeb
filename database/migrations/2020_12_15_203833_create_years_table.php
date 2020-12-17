@@ -13,8 +13,9 @@ class CreateYearsTable extends Migration
      */
     public function up()
     {
-        Schema::create('years', function (Blueprint $table) {
+        Schema::create('ucr_years', function (Blueprint $table) {
             $table->id();
+            $table->string('year');
             $table->timestamps();
         });
     }

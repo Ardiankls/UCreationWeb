@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Status;
+use App\Models\Course_year;
 use Illuminate\Http\Request;
 
-class StatusController extends Controller
+class CourseYearController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class StatusController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Status  $status
+     * @param  \App\Models\Course_year  $course_year
      * @return \Illuminate\Http\Response
      */
-    public function show(Status $status)
+    public function show(Course_year $course_year)
     {
         //
     }
@@ -52,10 +52,10 @@ class StatusController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Status  $status
+     * @param  \App\Models\Course_year  $course_year
      * @return \Illuminate\Http\Response
      */
-    public function edit(Status $status)
+    public function edit(Course_year $course_year)
     {
         //
     }
@@ -64,10 +64,10 @@ class StatusController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Status  $status
+     * @param  \App\Models\Course_year  $course_year
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Status $status)
+    public function update(Request $request, Course_year $course_year)
     {
         //
     }
@@ -75,10 +75,10 @@ class StatusController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Status  $status
+     * @param  \App\Models\Course_year  $course_year
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Status $status)
+    public function destroy(Course_year $course_year)
     {
         //
     }

@@ -13,7 +13,7 @@ class CreateCreationStudentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('creation_students', function (Blueprint $table) {
+        Schema::create('ucr_creation_students', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });

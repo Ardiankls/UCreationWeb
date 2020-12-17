@@ -13,8 +13,14 @@ class CreateCreationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('creations', function (Blueprint $table) {
+        Schema::create('ucr_creations', function (Blueprint $table) {
             $table->id();
+            $table->string('creation_name');
+            $table->date('create_date');
+            $table->text('description');
+            $table->enum('status',['0', '1', '3'])
+                ->default('0')
+                ->comment('0 = pending, 1 = approved, 2 = rejected');
             $table->timestamps();
         });
     }

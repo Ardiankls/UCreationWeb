@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\loginController;
 /*
@@ -15,9 +16,13 @@ use App\Http\Controllers\Auth\loginController;
 
 Route::get('/', function () {
 
-    return view('student.profile.detail');
+    return view('index');
 });
 
 //Route::get('login', function () {
 //    return redirect()->route('auth.login');
 //});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
