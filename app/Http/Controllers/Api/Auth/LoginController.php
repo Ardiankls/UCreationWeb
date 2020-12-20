@@ -32,7 +32,7 @@ class LoginController extends Controller
         }
         $accessToken = auth()->user()->createToken('authToken')->accessToken;
         return response(['user'=>auth()->user(), 'access_token' =>$accessToken]);
-//        $http = new GuzzleHttpClient;
+        $http = new GuzzleHttpClient;
 //
 //        $user = [
 //            'email' => $request->email,

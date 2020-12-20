@@ -44,8 +44,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-//    public function detailable() {
-//        return $this->morphTo();
-//    }
+    public function role() {
+        return $this->belongsTo(Role::class);
+    }
+
+    public function detailable() {
+        return $this->morphTo();
+    }
 
 }

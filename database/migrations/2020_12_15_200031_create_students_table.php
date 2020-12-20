@@ -20,7 +20,7 @@ class CreateStudentsTable extends Migration
             $table->string('email');
             $table->integer('batch');
             $table->text('description');
-            $table->string('phone');
+            $table->text('photo')->nullable();
             $table->string('gender',1);
             $table->string('phone');
             $table->string('line_account');

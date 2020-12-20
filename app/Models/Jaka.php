@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Jaka extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'initial',
+        'title_name'
+    ];
 }
