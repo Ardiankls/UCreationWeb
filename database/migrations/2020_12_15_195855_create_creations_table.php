@@ -15,8 +15,8 @@ class CreateCreationsTable extends Migration
     {
         Schema::create('ucr_creations', function (Blueprint $table) {
             $table->id();
-            $table->string('creation_name');
-            $table->date('create_date');
+            $table->string('name');
+            $table->date('date');
             $table->text('description');
             $table->enum('status',['0', '1', '3'])
                 ->default('0')
@@ -32,6 +32,6 @@ class CreateCreationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('creations');
+        Schema::dropIfExists('ucr_creations');
     }
 }

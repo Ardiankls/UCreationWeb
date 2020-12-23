@@ -13,8 +13,10 @@ class CreateCourseYearsTable extends Migration
      */
     public function up()
     {
-        Schema::create('course_years', function (Blueprint $table) {
+        Schema::create('ucr_course_years', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('ucr_year_id')->constrained();
+            $table->foreignId('ucr_course_id')->constrained();
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreateCourseYearsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('course_years');
+        Schema::dropIfExists('ucr_course_years');
     }
 }

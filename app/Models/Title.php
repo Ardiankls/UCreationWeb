@@ -16,8 +16,8 @@ class Title extends Model
     public function lecturer(){
         return $this->hasMany(lecturer::class);
     }
-    public function students(){
-        return $this->hasMany(Student::class);
+    public function staff(){
+        return $this->hasMany(Staff::class);
     }
 
 

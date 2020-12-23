@@ -23,6 +23,8 @@ class CreateStaffTable extends Migration
             $table->string('gender',1);
             $table->string('phone');
             $table->string('line_account');
+            $table->foreignId('department_id')->nullable()->constrained();
+            $table->foreignId('title_id')->constrained();
             $table->timestamps();
         });
     }
@@ -34,6 +36,7 @@ class CreateStaffTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('staff');
+        Schema::dropIfExists('ucr_staff');
+
     }
 }

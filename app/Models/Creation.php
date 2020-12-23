@@ -16,5 +16,7 @@ class Creation extends Model
         'status'
     ];
 
-
+    public function creates(){
+        return $this->belongsToMany(Student::class)->withPivot('created')->withTimestamps();
+    }
 }

@@ -21,7 +21,10 @@ class Staff extends Model
     ];
 
     public function staff(){
-        return $this->belongsTo(Staff::class, 'title', 'id');
+        return $this->belongsTo(Title::class, 'title', 'id');
+    }
+    public function users(){
+        return $this->morphMany('App\User', 'detailable');
     }
 
 }

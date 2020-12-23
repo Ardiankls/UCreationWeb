@@ -15,6 +15,9 @@ class CreateCreationStudentsTable extends Migration
     {
         Schema::create('ucr_creation_students', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('ucr_creation_id')->constrained();
+            $table->foreignId('student_id')->constrained();
+            $table->string('created');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateCreationStudentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('creation_students');
+        Schema::dropIfExists('ucr_creation_students');
     }
 }

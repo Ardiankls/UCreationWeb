@@ -24,8 +24,17 @@ class lecturer extends Model
     public function department(){
         return $this->belongsTo(Department::class, 'department', 'id');
     }
-    public function lecturer(){
-        return $this->belongsTo(lecturer::class, 'title', 'id');
+//    public function lecturer(){
+//        return $this->belongsTo(lecturer::class, 'title', 'id');
+//    }
+    public function jaka(){
+        return $this->belongsTo(Jaka::class, 'title', 'id');
+    }
+    public function title(){
+        return $this->belongsTo(Title::class, 'title', 'id');
+    }
+    public function users(){
+        return $this->morphMany('App\User', 'detailable');
     }
 
 }
