@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRolesTable extends Migration
+class AddForeignKeyToUcrCreations extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateRolesTable extends Migration
      */
     public function up()
     {
-        Schema::create('ucr_roles', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->timestamps();
+        Schema::table('ucr_creations', function (Blueprint $table) {
+            //
+            $table->foreignId('ucr_course_year_lecturer_id')->constrained();
         });
     }
 
@@ -27,6 +26,8 @@ class CreateRolesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ucr_roles');
+        Schema::table('ucr_creations', function (Blueprint $table) {
+            //
+        });
     }
 }

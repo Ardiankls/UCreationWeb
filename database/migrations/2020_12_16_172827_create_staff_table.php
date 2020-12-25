@@ -25,6 +25,7 @@ class CreateStaffTable extends Migration
             $table->string('line_account');
             $table->foreignId('department_id')->nullable()->constrained();
             $table->foreignId('title_id')->constrained();
+
             $table->timestamps();
         });
     }

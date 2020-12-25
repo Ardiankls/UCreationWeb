@@ -24,5 +24,6 @@ Route::get('/', function () {
 //});
 
 Auth::routes();
-
+Route::resource('creation', \App\Http\Controllers\CreationController::class);
+//Route::view('create', 'student.creation.create')->name('createCreation');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

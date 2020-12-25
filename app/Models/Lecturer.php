@@ -34,7 +34,7 @@ class lecturer extends Model
         return $this->belongsTo(Title::class, 'title', 'id');
     }
     public function users(){
-        return $this->morphMany('App\User', 'detailable');
+        return $this->morphOne('App\Models\User', 'detailable');
     }
 
 }

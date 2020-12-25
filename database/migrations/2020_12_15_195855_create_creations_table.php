@@ -21,6 +21,7 @@ class CreateCreationsTable extends Migration
             $table->enum('status',['0', '1', '3'])
                 ->default('0')
                 ->comment('0 = pending, 1 = approved, 2 = rejected');
+
             $table->timestamps();
         });
     }

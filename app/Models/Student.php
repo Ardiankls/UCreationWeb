@@ -30,7 +30,7 @@ class Student extends Model
     }
 
     public function users(){
-        return $this->morphMany('App\User', 'detailable');
+        return $this->morphOne('App\Models\User', 'detailable');
     }
 
 }

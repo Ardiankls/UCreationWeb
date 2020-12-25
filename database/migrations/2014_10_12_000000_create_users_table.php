@@ -21,8 +21,8 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->enum('is_login', ['0', '1'])
                 ->default( '0')->comment('0 = notLogin, 1 = Login');
-//            $table->integer('detailable_id')->unsigned();
-//            $table->string('detailable_type');
+            $table->integer('detailable_id')->unsigned();
+            $table->string('detailable_type');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -34,7 +34,9 @@ class CreateUsersTable extends Migration
      * @return void
      */
     public function down()
+
     {
         Schema::dropIfExists('users');
     }
+
 }

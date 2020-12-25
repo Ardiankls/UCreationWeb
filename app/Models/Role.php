@@ -7,7 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Role extends Model
 {
+
+
     use HasFactory;
+
+    protected $table = 'ucr_roles';
 
     protected $fillable = [
         'name'
