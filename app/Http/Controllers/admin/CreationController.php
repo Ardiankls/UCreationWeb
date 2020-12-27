@@ -11,9 +11,10 @@ class CreationController extends Controller
     public function index()
     {
         //
+        $pages = 'admin';
         $creation = creation::all();
 
-        return view('admin.index', compact('creation'));
+        return view('admin.index', compact('creation','pages'));
 
 
     }

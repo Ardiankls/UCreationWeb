@@ -1,4 +1,7 @@
 <?php
+
+use App\Http\Controllers\CreationController;
+
 //Import Admin Controller
 use App\Http\Controllers\admin\CourseController as AdminCourseController;
 use App\Http\Controllers\admin\CreationController as AdminCreationController;
@@ -64,14 +67,17 @@ use App\Http\Controllers\Auth\loginController;
 |
 */
 //
-Route::get('/', function () {
 
-    return view('index');
-});
-
+//Route::get('/', function () {
+//
+//    return redirect()->route('creation.index');
+//});
 //Route::get('login', function () {
 //    return redirect()->route('auth.login');
 //});
+
+Route::get('/', [CreationController::class, 'index'])->name('index');
+
 
 Auth::routes();
 

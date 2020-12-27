@@ -15,8 +15,9 @@ class CreationController extends Controller
     public function index()
     {
         //
+        $pages = 'guest';
         $creation = creation::all();
-        return view('admin.creation.index', compact('creation'));
+        return view('index', compact('creation', 'pages'));
 
 
     }
@@ -29,7 +30,7 @@ class CreationController extends Controller
     public function create()
     {
 
-        return view('student.creation.create');
+//        return view('student.creation.create');
 
         //
     }
@@ -43,8 +44,8 @@ class CreationController extends Controller
     public function store(Request $request)
     {
         //
-        creation::create($request->all());
-        return redirect()->route('student.creation.index');
+//        creation::create($request->all());
+//        return redirect()->route('student.creation.index');
     }
 
     /**
