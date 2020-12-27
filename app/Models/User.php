@@ -22,7 +22,11 @@ class User extends Authenticatable
     protected $fillable =  [
         'name',
         'email',
-        'password', 'is_login'
+        'password',
+        'is_login',
+        'detailabe_id',
+        'detialable_type',
+
     ];
 
     /**
@@ -45,11 +49,41 @@ class User extends Authenticatable
     ];
 
     public function role() {
-        return $this->belongsTo(Role::class);
+        return $this->belongsTo(Role::class,'role_id', 'id');
     }
+
+
 
     public function detailable() {
         return $this->morphTo();
     }
 
+    public function isAdmin()
+    {
+        if ($this->role->name == 'Admin' && $this->is_login == 1) {
+            return true;
+        }
+        return false;
+    }
+    public function isLecturer()
+    {
+        if ($this->role->name == 'Lecturer' && $this->is_login == 1) {
+            return true;
+        }
+        return false;
+    }
+    public function isStaff()
+    {
+        if ($this->role->name == 'Staff' && $this->is_login == 1) {
+            return true;
+        }
+        return false;
+    }
+    public function isStudent()
+    {
+        if ($this->role->name == 'Student' && $this->is_login == 1) {
+            return true;
+        }
+        return false;
+    }
 }
