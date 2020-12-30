@@ -27,7 +27,7 @@ class CreationController extends Controller
     public function create()
     {
 
-        return view('student.creation.create');
+        return view('admin.creation.create');
 
         //
     }

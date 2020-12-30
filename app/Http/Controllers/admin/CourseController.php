@@ -4,7 +4,14 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Course;
+use App\Models\Course_year;
+use App\Models\course_year_lecturer;
+use App\Models\department;
+use App\Models\User;
+use App\Models\year;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class CourseController extends Controller
 {
@@ -31,8 +38,12 @@ class CourseController extends Controller
     {
         //
         $pages = 'course';
-        $courses = course::all();
-        return redirect()->route('admin.course.create', compact('courses'));
+        $departments = department::all();
+        $periods = year::all();
+        $lecturers = User::where('role_id', '=', 2)
+            ->get();
+        return view('admin.course.create', compact('departments','periods', 'lecturers', 'pages'));
+
     }
 
     /**
@@ -44,8 +55,25 @@ class CourseController extends Controller
     public function store(Request $request)
     {
         //
-        Course::create($request->all());
-        return redirect()->route('admin.course.list');
+
+        $course = Course::create([
+            'name' => $request['name_course'],
+            'date'=>'',
+        ]);
+
+
+        $cy = Course_year::create([
+            'ucr_year_id' => $request['course_preiod'],
+            'ucr_course_id' => $course->id,
+        ]);
+
+        $cyl = Course_year_lecturer::create([
+            'ucr_course_year_id' => $cy->id,
+            'lecturer_id' => $request['course_lecturer'],
+        ]);
+        $lect = Auth::Course_year_lecturer()->teachees()->syncWithoutDetaching($request->ucr_course_year_lecturer_id,['couse_year']);
+//        $lect = Auth::Course_year_lecturer()->teachees()->syncWithoutDetaching($request->ucr_course_year_lecturer_id,['couse_year']);
+        return redirect()->route('admin.course.store');
     }
 
     /**
@@ -57,6 +85,7 @@ class CourseController extends Controller
     public function show($id)
     {
         //
+
     }
 
     /**

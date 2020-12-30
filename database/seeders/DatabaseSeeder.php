@@ -22,7 +22,8 @@ class DatabaseSeeder extends Seeder
             RoleSeeder::class,
             JakaSeeder::class,
             DepartmentSeeder::class,
-            TitleSeeder::class
+            TitleSeeder::class,
+            YearSeeder::class
         ]);
 
         Model::reguard();

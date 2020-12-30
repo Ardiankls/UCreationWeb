@@ -53,14 +53,14 @@ class LoginController extends Controller
         $lecturer = [
             'email' => $request->email,
             'password' => $request->password,
-            'role_id' => 3,
+            'role_id' => 2,
             'is_login' => '0'
         ];
 
         $staff = [
             'email' => $request->email,
             'password' => $request->password,
-            'role_id' => 2,
+            'role_id' => 3,
             'is_login' => '0'
         ];
 
@@ -74,9 +74,11 @@ class LoginController extends Controller
         if (Auth::attempt($admin)) {
             $this->isLogin(Auth::id());
             return redirect()->route('admin.index');
+
         } elseif (Auth::attempt($lecturer)) {
             $this->isLogin(Auth::id());
             return redirect()->route('lecturer.index');
+
         } elseif (Auth::attempt($staff)) {
             $this->isLogin(Auth::id());
             return redirect()->route('staff.index');

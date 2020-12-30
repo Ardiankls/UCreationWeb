@@ -98,7 +98,7 @@ Route::group([ 'middleware' => ['admin'], 'prefix' => 'admin', 'as' => 'admin.']
 
 //route group untuk lecturer
 Route::group(['middleware' => ['lecturer'], 'prefix' => 'lecturer', 'as' => 'lecturer.'], function () {
-    Route::get('/', [LecturerPageController::class, 'dashboard'])->name('dashboard');
+    Route::get('/', [LecturerCreationController::class, 'index'])->name('index');
     Route::resource('course', LecturerCourseController::class);
     Route::resource('department', LecturerDepartmentController::class);
     Route::resource('jaka', LecturerJakaController::class);
@@ -112,7 +112,7 @@ Route::group(['middleware' => ['lecturer'], 'prefix' => 'lecturer', 'as' => 'lec
 });
 
 Route::group(['middleware' => ['staff'], 'prefix' => 'staff', 'as' => 'staff.'], function () {
-    Route::get('/', [StaffPageController::class, 'dashboard'])->name('dashboard');
+    Route::get('/', [StaffCreationController::class, 'index'])->name('index');
     Route::resource('course', StaffCourseController::class);
     Route::resource('department', StaffDepartmentController::class);
     Route::resource('jaka', StaffJakaController::class);
@@ -126,7 +126,7 @@ Route::group(['middleware' => ['staff'], 'prefix' => 'staff', 'as' => 'staff.'],
 });
 
 Route::group(['middleware' => ['student'], 'prefix' => 'student', 'as' => 'student.'], function () {
-    Route::get('/', [StudentPageControllerAlias::class, 'dashboard'])->name('dashboard');
+    Route::get('/', [StudentCreationController::class, 'index'])->name('index');
     Route::resource('course', StudentCourseController::class);
     Route::resource('department', StudentDepartmentController::class);
     Route::resource('jaka', StudentJakaController::class);

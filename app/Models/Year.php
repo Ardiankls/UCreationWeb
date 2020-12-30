@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class year extends Model
 {
     use HasFactory;
+
+    protected $table = 'ucr_years';
     protected $fillable = [
         'year'
     ];
