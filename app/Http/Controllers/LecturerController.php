@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\lecturer;
+use App\Models\Lecturer;
 use Illuminate\Http\Request;
 
 class LecturerController extends Controller
@@ -41,10 +41,10 @@ class LecturerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\lecturer  $lecturer
+     * @param  \App\Models\Lecturer  $lecturer
      * @return \Illuminate\Http\Response
      */
-    public function show(lecturer $lecturer)
+    public function show(Lecturer $lecturer)
     {
         //
     }
@@ -52,10 +52,10 @@ class LecturerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\lecturer  $lecturer
+     * @param  \App\Models\Lecturer  $lecturer
      * @return \Illuminate\Http\Response
      */
-    public function edit(lecturer $lecturer)
+    public function edit(Lecturer $lecturer)
     {
         //
     }
@@ -64,10 +64,10 @@ class LecturerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\lecturer  $lecturer
+     * @param  \App\Models\Lecturer  $lecturer
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, lecturer $lecturer)
+    public function update(Request $request, Lecturer $lecturer)
     {
         //
     }
@@ -75,10 +75,10 @@ class LecturerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\lecturer  $lecturer
+     * @param  \App\Models\Lecturer  $lecturer
      * @return \Illuminate\Http\Response
      */
-    public function destroy(lecturer $lecturer)
+    public function destroy(Lecturer $lecturer)
     {
         //
     }

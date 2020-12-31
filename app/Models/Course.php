@@ -19,4 +19,8 @@ class Course extends Model
         return $this->belongsTo(Department::class, 'department', 'id');
     }
 
+    public function years(){
+        return $this->belongsToMany(year::class, 'ucr_course_years', 'id','course_id');
+    }
+
 }

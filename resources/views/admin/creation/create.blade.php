@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <body>
-    <form action="{{ route('student.creation.store') }}" method="post">
+    <form action="{{ route('admin.creation.store') }}" method="post">
         @csrf
         <div class="container" style="padding: 20px 55px;">
             <h1>Creation Information</h1>

@@ -16,7 +16,7 @@
                 </select>
             </div>
             <div class="form-group"><label>Period</label>
-                <select name="course_preiod" class="custom-select">
+                <select name="course_period" class="custom-select">
                                         @foreach ($periods as $year)
                                             <option value="{{ $year->id }}" required>
                                                 {{ $year->year }} </option>

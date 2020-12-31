@@ -13,15 +13,25 @@ class course_year_lecturer extends Pivot
     protected $table = 'ucr_course_year_lecturers';
 
     protected $fillable = [
-        'ucr_course_year_id', 'lecturer_id'
+        'ucr_course_year_id', 'ucr_user_id'
 
     ];
 
-    public function teaches(){
-        return $this->belongsToMany(Course_year::class)->withPivot('course_year_id')->withTimestamps();
-    }
 
-    public function lect(){
-        return $this->belongsToMany(lecturer::class)->withPivot('lecturer_id')->withTimestamps();
-    }
+public function lecturer(){
+    return $this->belongsTo(Course_year::class, 'ucr_course_year_id', 'id');
+}
+
+public function teach(){
+    return $this->belongsTo(User::class, 'ucr_user_id', 'id');
+}
+
+//    public function teaches(){
+//        return $this->belongsToMany(Course_year::class)
+//        return $this->belongsToMany(Course_year::class)->withPivot('ucr_course_year_id')->withTimestamps();
+//    }
+
+//    public function lect(){
+//        return $this->belongsToMany(lecturer::class)->withPivot('lecturer_id')->withTimestamps();
+//    }
 }

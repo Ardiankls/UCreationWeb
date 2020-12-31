@@ -12,7 +12,7 @@ class User extends Authenticatable
 {
     use  HasApiTokens ,HasFactory, Notifiable;
 
-    protected  $table = 'users';
+    protected  $table = 'ucr_users';
 
     /**
      * The attributes that are mass assignable.
@@ -52,7 +52,12 @@ class User extends Authenticatable
         return $this->belongsTo(Role::class,'role_id', 'id');
     }
 
+    public function teaches(){
 
+        return $this->belongsToMany(Course_year::class, 'ucr_course_year_lecturers', 'ucr_user_id',
+            'ucr_course_year_id');
+
+    }
 
     public function detailable() {
         return $this->morphTo();

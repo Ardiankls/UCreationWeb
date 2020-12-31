@@ -5,10 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class lecturer extends Model
+class Lecturer extends Model
 {
     use HasFactory;
 
+    protected $table = 'lecturers';
     protected $fillable = [
         'nip',
         'nidn',
@@ -20,6 +21,8 @@ class lecturer extends Model
         'phone',
         'line_account'
     ];
+
+
 
     public function department(){
         return $this->belongsTo(Department::class, 'department', 'id');

@@ -13,6 +13,6 @@ class Jaka extends Model
         'title_name'
     ];
     public function jaka(){
-        return $this->hasMany(lecturer::class);
+        return $this->hasMany(Lecturer::class);
     }
 }

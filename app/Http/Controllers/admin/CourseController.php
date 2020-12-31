@@ -23,9 +23,9 @@ class CourseController extends Controller
     public function index()
     {
         //
-        $courses = course::all();
+        $courses = course_year_lecturer::all();
         $pages = 'course';
-        return view('admin.course.list', compact('courses', 'pages'));
+        return view('admin.course.index', compact('courses', 'pages'));
 
     }
 
@@ -55,7 +55,7 @@ class CourseController extends Controller
     public function store(Request $request)
     {
         //
-
+        $pages = 'course';
         $course = Course::create([
             'name' => $request['name_course'],
             'date'=>'',
@@ -63,17 +63,17 @@ class CourseController extends Controller
 
 
         $cy = Course_year::create([
-            'ucr_year_id' => $request['course_preiod'],
+            'ucr_year_id' => $request['course_period'],
             'ucr_course_id' => $course->id,
         ]);
-
+//
         $cyl = Course_year_lecturer::create([
             'ucr_course_year_id' => $cy->id,
-            'lecturer_id' => $request['course_lecturer'],
+            'ucr_user_id' => $request['course_lecturer'],
         ]);
-        $lect = Auth::Course_year_lecturer()->teachees()->syncWithoutDetaching($request->ucr_course_year_lecturer_id,['couse_year']);
-//        $lect = Auth::Course_year_lecturer()->teachees()->syncWithoutDetaching($request->ucr_course_year_lecturer_id,['couse_year']);
-        return redirect()->route('admin.course.store');
+//        $teach = Auth::Course_year_lecturer()->teaches()->syncWithoutDetaching($request->ucr_course_year_lecturer_id,['couse_year']);
+//        $lect = Auth::Course_year_lecturer()->lect()->syncWithoutDetaching($request->ucr_course_year_lecturer_id,['couse_year']);
+        return redirect()->route('admin.course.index');
     }
 
     /**
