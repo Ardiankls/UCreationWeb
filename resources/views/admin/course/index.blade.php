@@ -17,9 +17,11 @@
                 <thead>
                 <tr>
                     <th scope="col">ID</th>
+{{--                    <th scope="col">Department</th>--}}
                     <th scope="col">Course Name</th>
                     <th scope="col">Year</th>
                     <th scope="col">lecturers</th>
+                    <th scope="col">action</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -27,11 +29,21 @@
                     <tr>
 
                         <td>{{ $course->id}}</td>
+{{--                        <td>{{ $course->lecturer->courses->course->name }}</td>--}}
                         <td>{{ $course->lecturer->courses->name }}</td>
                         <td>{{ $course->lecturer->years->year }}</td>
                         <td>{{ $course->teach->name }}</td>
 {{--                        <td>{{ $event->status }}</td>--}}
 {{--                        <td>{{ $event->creator->name }}</td>--}}
+                        @auth
+                            <td>
+                                <form action="{{ route('admin.course.destroy', $course) }}" method="post">
+                                    @csrf
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
+                            </td>
+                        @endauth
 
                         <td>
 {{--                            <form action="{{ route('creator.event.show', $event) }}" method="get">--}}

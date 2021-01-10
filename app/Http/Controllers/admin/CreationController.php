@@ -3,8 +3,12 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\course_year_lecturer;
 use App\Models\Creation;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use League\Event\Event;
 
 class CreationController extends Controller
 {
@@ -22,12 +26,14 @@ class CreationController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
-
-        return view('admin.creation.create');
+        $courses = course_year_lecturer::all();
+        $students = User::where('role_id', '=', 1)
+            ->get();
+        return view('admin.creation.create', compact('courses', 'students'));
 
         //
     }
@@ -36,31 +42,68 @@ class CreationController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function store(Request $request)
     {
-        //
-        creation::create($request->all());
-        return redirect()->route('student.creation.index');
+
+//        $course = course_year_lecturer::all();
+
+        //ini buat nge store image
+        $request->validate([
+            'photo' => 'image|mimes:png,jpg,jpeg,svg',
+        ]);
+        $imgName = $request->picture->getClientOriginalName().'-'.time().'.'.$request->picture->extension();
+        $request->picture->move(public_path('/image/creation'), $imgName);
+
+
+        $creation = Creation::create([
+            'name' => $request['name_creation'],
+            'date'=>$request['date_created'],
+            'course'=>$request['course_name'],
+            'short_description'=>$request['short_desc'],
+            'long_description'=>$request['long_desc'],
+            'picture'=>$imgName,
+            'creator_team'=>$request['creator_team'],
+            'ucr_course_year_lecturer_id'=>$request['course_name'],
+         ]);
+        return redirect()->route('admin.creation.index');
+
+
+
+
+//        $cy = Course_year::create([
+//            'ucr_year_id' => $request['course_period'],
+//            'ucr_course_id' => $course->id,
+//        ]);
+////
+//        $cyl = Course_year_lecturer::create([
+//            'ucr_course_year_id' => $cy->id,
+//            'ucr_user_id' => $request['course_lecturer'],
+//        ]);
+
+//        return redirect()->route('student.creation.index');
     }
 
     /**
      * Display the specified resource.
      *
      * @param  \App\Models\Creation  $creation
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show(Creation $creation)
     {
-        //
+        //buat nge show detail Project
+        $pages = 'creation';
+        $creation = Creation::findOrFail($creation->id);
+
     }
 
     /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Creation  $creation
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function edit(Creation $creation)
     {
@@ -72,7 +115,7 @@ class CreationController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Creation  $creation
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function update(Request $request, Creation $creation)
     {
@@ -83,7 +126,7 @@ class CreationController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Creation  $creation
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function destroy(Creation $creation)
     {

@@ -59,6 +59,7 @@ class CourseController extends Controller
         $course = Course::create([
             'name' => $request['name_course'],
             'date'=>'',
+            ''
         ]);
 
 
@@ -117,8 +118,10 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(course_year_lecturer $course)
     {
         //
+        $course->delete();
+        return redirect()->back();
     }
 }

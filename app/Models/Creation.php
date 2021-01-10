@@ -11,8 +11,12 @@ class Creation extends Model
     protected  $table = 'ucr_creations';
     protected $fillable = [
         'name',
+        'course',
         'date',
-        'description',
+        'short_description',
+        'long_description',
+        'picture',
+        'ucr_course_year_lecturer_id',
         'status'
     ];
 
