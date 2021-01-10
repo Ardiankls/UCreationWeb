@@ -16,8 +16,9 @@ class Creation extends Model
         'short_description',
         'long_description',
         'picture',
-        'ucr_course_year_lecturer_id',
-        'status'
+        'creator_team',
+        'status',
+        'ucr_course_year_lecturer_id'
     ];
 
     public function creates(){

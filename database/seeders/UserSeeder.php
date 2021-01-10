@@ -25,6 +25,15 @@ class UserSeeder extends Seeder
         $user->save();
 
         $user =new User();
+        $user->name = 'ardian';
+        $user->email = 'ardian@lecturer.com';
+        $user->password = Hash::make('passworlecturer2');
+        $user->role_id = 2;
+        $user->detailable_id= 2;
+        $user->detailable_type= 'App\Models\Lecturer';
+        $user->save();
+
+        $user =new User();
         $user->name = 'kevin';
         $user->email = 'kevin@admin.com';
         $user->password = Hash::make('passwordadmin2');
@@ -64,6 +73,15 @@ class UserSeeder extends Seeder
         $user->name = 'fadhel';
         $user->email = 'fadhel@student.com';
         $user->password = Hash::make('passwordstudent1');
+        $user->role_id = 1;
+        $user->detailable_id= 1;
+        $user->detailable_type= 'App\Models\Student';
+        $user->save();
+
+        $user =new User();
+        $user->name = 'budi';
+        $user->email = 'budi@student.com';
+        $user->password = Hash::make('passwordstudent2');
         $user->role_id = 1;
         $user->detailable_id= 1;
         $user->detailable_type= 'App\Models\Student';

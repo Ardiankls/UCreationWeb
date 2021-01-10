@@ -15,15 +15,17 @@
                     </ul>
                 </div>
             </div>
-            <div class="row">
+            <div class="row  d-inline">
                 @foreach($creation as $creation)
-                <div class="card-view bg-white shadow  mx-auto" style="width: 200px; height: 267px; margin-top: 50px; border-radius: 15px;">
-                    <img src="/image/creation/{{$creation->picture}}" class="card-img-top" style="padding: 2px ;margin: 0 auto; height: 135px; margin-top: 10px; border-radius: 15px;">
+                <a class="" href="{{ route('admin.creation.show', $creation->id) }}">
+                <div class="card-view bg-white shadow "  style="width: 200px; height: 267px; margin-top: 50px; border-radius: 15px;">
+                    <img src="/image/creation/{{$creation->picture}}" class="card-img-top" style="padding: 2px ;margin: 0 auto; height: 155px; margin-top: 10px; border-radius: 15px;">
 {{--                    <div class="image-cover rounded-3 mx-auto mt-3 " style="padding: 2px; background-color: lightpink; width: auto; height: 120px;"></div>--}}
                     <h1 class="title mx-auto text-center p-2 fs-4 font-weight-bold" style="color: #979BFF">{{$creation->name}}</h1>
                     <p class="proj-shortdesc mx-auto p-2 fs-6" style="color: #979BFF"> {{$creation->short_description}}</p>
                     {{--    <img class="rounded-3" src="img/noimage.jpg">--}}
                 </div>
+                </a>
                 @endforeach
 {{--                <div class="card-view bg-white shadow rounded-3 mx-auto" style="width: 200px; height: 267px; margin-top: 50px;">--}}
 {{--                    <div class="image-cover rounded-3 mx-auto mt-3" style="padding: 2px; background-color: lightpink; width: auto; height: 120px;"></div>--}}
