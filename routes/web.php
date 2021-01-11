@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\CreationController as CreationControllerApi;
 use App\Http\Controllers\CreationController;
 
 //Import Admin Controller
@@ -138,7 +139,9 @@ Route::group(['middleware' => ['student'], 'prefix' => 'student', 'as' => 'stude
     Route::resource('student', StudentStudentController::class);
     Route::resource('user', StudentUserController::class);
 });
-
+Route::group(['middleware' => 'auth:api'], function (){
+    Route::apiResource('creations', CreationControllerApi::class);
+});
 //Route::resource('creation', \App\Http\Controllers\CreationController::class);
 //Route::view('create', 'student.creation.create')->name('createCreation');
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -22,17 +22,22 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        $loginData= $request->validate([
+
+        $http = new GuzzleHttpClient;
+
+        $user= $request->validate([
             'email' => 'email|required',
-            'password' => 'required'
+            'password' => 'required',
+            'is_login' => '0'
+
         ]);
 
-        if(!auth()->attempt($loginData)){
-            return response(['message'=>'invalid credentials']);
-        }
-        $accessToken = auth()->user()->createToken('authToken')->accessToken;
-        return response(['user'=>auth()->user(), 'access_token' =>$accessToken]);
-        $http = new GuzzleHttpClient;
+//        if(!auth()->attempt($loginData)){
+//            return response(['message'=>'invalid credentials']);
+//        }
+//        $accessToken = auth()->user()->createToken('authToken')->accessToken;
+//        return response(['user'=>auth()->user(), 'access_token' =>$accessToken]);
+
 //
 //        $user = [
 //            'email' => $request->email,
@@ -43,34 +48,40 @@ class LoginController extends Controller
 ////            'is_verified' => '1'
 //        ];
 //
-//        $check = DB::table('users')->where('email', $request->email)->first();
+        $check = DB::table('ucr_users')->where('email', $request->email)->first();
 //
 //
-//                    if (Auth::attempt($user)) {
-//                        $this->is_login(Auth::id());
-//                        $response = $http->post('http://ucreation.com/oauth/token', [
-//                            'form_params' => [
-//                                'grant_type' => 'password',
-//                                'client_id' => $this->client->id,
-//                                'client_secret' => $this->client->secret,
-//                                'username' => $request->email,
-//                                'password' => $request->password,
-//                                'scope' => '*'
-//                            ]
-//                        ]);
-//                        return json_decode((string) $response->getBody(), true);
-//                    } else {
-//                        return response([
-//                            'message' => 'Login Failed'
-//                        ]);
-//                    }
-//
+        if ($check->is_login == '0') {
+                    if (Auth::attempt($user)) {
+                        $this->is_login(Auth::id());
+                        $response = $http->post('http://ucreation.com/oauth/token', [
+                            'form_params' => [
+                                'grant_type' => 'password',
+                                'client_id' => $this->client->id,
+                                'client_secret' => $this->client->secret,
+                                'username' => $request->email,
+                                'password' => $request->password,
+                                'scope' => '*'
+                            ]
+                        ]);
+                        return json_decode((string) $response->getBody(), true);
+                    } else {
+                        return response([
+                            'message' => 'Login Failed'
+                        ]);
+                    }
+        } else {
+            return response([
+                'message' => 'Account is already logged in.'
+            ]);
+        }
+
     }
-//        private function is_login(int $id)
-//    {
-//        $user = User::findOrFail($id);
-//        return $user->update([
-//            'is_login' => '1',
-//        ]);
-//    }
+        private function is_login(int $id)
+    {
+        $user = User::findOrFail($id);
+        return $user->update([
+            'is_login' => '1',
+        ]);
+    }
 }
