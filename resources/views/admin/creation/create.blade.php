@@ -28,7 +28,7 @@
             <div class="form-group"><label>Long Description</label>
                 <input class="form-control" type="text" name="long_desc" required></div>
             <div class="form-group">
-                <label for="picture"> </label>
+                <label for="picture">Upload Picture </label>
                 <input type="file" class="form-control-file" name="picture">
             </div>
 
