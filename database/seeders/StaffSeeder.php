@@ -17,18 +17,30 @@ class StaffSeeder extends Seeder
     {
         //
         $staff =new Staff();
-        $staff->nip = '0002';
-        $staff->nidn = '0002';
-        $staff->name = 'fadhel';
-        $staff->email = 'fadhel@lecturer.com';
+        $staff->nip = '0001';
+        $staff->name = 'ardian';
+        $staff->email = 'ardian@admin.com';
         $staff->description= '';
         $staff->photo ='' ;
         $staff->gender = 'M';
         $staff->phone = '0312456';
-        $staff->line_account = 'fjanuar';
-        $staff->department_id = '8';
-        $staff->title_id = '2';
-        $staff->jaka_id = '1';
+        $staff->line_account = 'akls07';
+        $staff->department_id = '2';
+        $staff->title_id = '1';
+        $staff->save();
+
+        $staff =new Staff();
+        $staff->nip = '0002';
+        $staff->name = 'fadhel';
+        $staff->email = 'fadhel@staff.com';
+        $staff->description= '';
+        $staff->photo ='' ;
+        $staff->gender = 'M';
+        $staff->phone = '0312456';
+        $staff->line_account = 'fdhel';
+        $staff->department_id = '2';
+        $staff->title_id = '1';
         $staff->save();
     }
+
 }

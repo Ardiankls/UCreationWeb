@@ -9,6 +9,7 @@ class Staff extends Model
 {
     use HasFactory;
 
+    protected $table = 'staff';
     protected $fillable = [
         'nip',
         'name',
@@ -17,7 +18,9 @@ class Staff extends Model
         'photo',
         'gender',
         'phone',
-        'line_account'
+        'line_account',
+        'department_id',
+        'title_id'
     ];
 
     public function staff(){
@@ -26,5 +29,12 @@ class Staff extends Model
     public function users(){
         return $this->morphOne('App\Models\User', 'detailable');
     }
+    public function department(){
+        return $this->belongsTo(Department::class, 'department', 'id');
+    }
+    public function title(){
+        return $this->belongsTo(Title::class, 'title', 'id');
+    }
+
 
 }
