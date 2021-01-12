@@ -30,7 +30,9 @@
             @auth()
                         @if(Auth()->user()->isAdmin()){{ route('admin.creation.index') }}@endif
                         @if(Auth()->user()->isLecturer()){{ route('lecturer.creation.index') }}@endif
+                        @if(Auth()->user()->isStaff()){{ route('staff.creation.index') }}@endif
                         @if(Auth()->user()->isStudent()){{ route('student.creation.index') }}@endif
+
             @endauth
                 ">
                 {{ config('app.name', 'UCreation') }}

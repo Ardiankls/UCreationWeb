@@ -96,7 +96,7 @@ class CreationController extends Controller
         //buat nge show detail Project
         $pages = 'creation';
 //        $user = User::all();
-        return view(admin.creation.detail, compact('pages', 'creation'));
+        return view('admin.creation.detail', compact('pages', 'creation'));
 
     }
 
