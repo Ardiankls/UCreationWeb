@@ -21,7 +21,7 @@ class CreateCreationsTable extends Migration
             $table->text('short_description');
             $table->text('long_description');
             $table->text('picture')->nullable();
-            $table->string('created_by');
+            $table->string('created_by')->nullable();
             $table->string('creator_team')->nullable();
             $table->enum('status',['0', '1', '3'])
                 ->default('0')

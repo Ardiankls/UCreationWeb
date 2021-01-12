@@ -36,7 +36,12 @@
 {{--                        <td>{{ $event->status }}</td>--}}
 {{--                        <td>{{ $event->creator->name }}</td>--}}
                         @auth
-                            <td>
+                            <td class="d-flex">
+                                <form action="{{ route('admin.course.update', $course) }}">
+                                    @csrf
+
+                                    <button type="submit" class="btn btn-primary">Edit</button>
+                                </form>
                                 <form action="{{ route('admin.course.destroy', $course) }}" method="post">
                                     @csrf
                                     <input type="hidden" name="_method" value="DELETE">

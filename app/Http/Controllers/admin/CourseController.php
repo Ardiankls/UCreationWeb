@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Course;
 use App\Models\Course_year;
 use App\Models\course_year_lecturer;
+use App\Models\Creation;
 use App\Models\department;
 use App\Models\User;
 use App\Models\year;
@@ -107,9 +108,12 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Course $course)
     {
         //
+        $course->update($request->all());
+//        return redirect()->route('admin.course.update');
+        return view('admin.course.edit');
     }
 
     /**
