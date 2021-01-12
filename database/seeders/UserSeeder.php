@@ -25,6 +25,33 @@ class UserSeeder extends Seeder
         $user->save();
 
         $user =new User();
+        $user->name = 'kevin';
+        $user->email = 'kevin@admin.com';
+        $user->password = Hash::make('passwordadmin2');
+        $user->role_id = 4;
+        $user->detailable_id= 3;
+        $user->detailable_type= 'App\Models\Staff';
+        $user->save();
+
+        $user =new User();
+        $user->name = 'fadhel';
+        $user->email = 'fadhel@admin.com';
+        $user->password = Hash::make('passwordadmin3');
+        $user->role_id = 4;
+        $user->detailable_id= 3;
+        $user->detailable_type= 'App\Models\Staff';
+        $user->save();
+
+        $user =new User();
+        $user->name = 'fadhel';
+        $user->email = 'fadhel@staff.com';
+        $user->password = Hash::make('passwordstaff1');
+        $user->role_id = 3;
+        $user->detailable_id= 3;
+        $user->detailable_type= 'App\Models\Staff';
+        $user->save();
+
+        $user =new User();
         $user->name = 'ardian';
         $user->email = 'ardian@lecturer.com';
         $user->password = Hash::make('passworlecturer2');
@@ -33,14 +60,7 @@ class UserSeeder extends Seeder
         $user->detailable_type= 'App\Models\Lecturer';
         $user->save();
 
-        $user =new User();
-        $user->name = 'kevin';
-        $user->email = 'kevin@admin.com';
-        $user->password = Hash::make('passwordadmin2');
-        $user->role_id = 4;
-        $user->detailable_id= 3;
-        $user->detailable_type= 'App\Models\Staff';
-        $user->save();
+
 
         $user =new User();
         $user->name = 'kevin';
@@ -68,6 +88,10 @@ class UserSeeder extends Seeder
         $user->detailable_id= 2;
         $user->detailable_type= 'App\Models\Lecturer';
         $user->save();
+
+
+
+
 
         $user =new User();
         $user->name = 'fadhel';
