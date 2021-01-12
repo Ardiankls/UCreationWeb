@@ -21,7 +21,10 @@ class Creation extends Model
         'ucr_course_year_lecturer_id'
     ];
 
+    public function creators(){
+        return $this->belongsTo(User::class, 'creator_team', 'id');
+    }
     public function creates(){
-        return $this->belongsToMany(Student::class)->withPivot('created')->withTimestamps();
+        return $this->belongsToMany(Student::class)->withPivot('creator_team')->withTimestamps();
     }
 }

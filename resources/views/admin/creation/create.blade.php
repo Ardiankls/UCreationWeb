@@ -31,7 +31,9 @@
                 <label for="picture">Upload Picture </label>
                 <input type="file" class="form-control-file" name="picture">
             </div>
+            <div class="form-group"><label>Creator/ Team</label>
 
+            </div>
             <div class="form-group"><label>Creator/ Team</label>
                 <select name="creator_team" class="custom-select">
                     @foreach ($students as $user)

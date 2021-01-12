@@ -8,6 +8,7 @@ use App\Models\Creation;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 use League\Event\Event;
 
 class CreationController extends Controller
@@ -64,6 +65,7 @@ class CreationController extends Controller
             'short_description'=>$request['short_desc'],
             'long_description'=>$request['long_desc'],
             'picture'=>$imgName,
+            'created_by'=>Auth::id(),
             'creator_team'=>$request['creator_team'],
             'ucr_course_year_lecturer_id'=>$request['course_name'],
          ]);
@@ -95,8 +97,10 @@ class CreationController extends Controller
     {
         //buat nge show detail Project
         $pages = 'creation';
+        $students = User::where('role_id', '=', 1)
+            ->get();
 //        $user = User::all();
-        return view('admin.creation.detail', compact('pages', 'creation'));
+        return view('admin.creation.detail', compact('pages', 'creation', 'students'));
 
     }
 

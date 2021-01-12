@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
             YearSeeder::class,
             LecturerSeeder::class,
             StaffSeeder::class,
+            StudentSeeder::class,
             CourseSeeder::class,
             Course_yearSeeder::class,
             Course_year_lecturerSeeder::class,
