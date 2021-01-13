@@ -63,7 +63,6 @@ class CourseController extends Controller
             ''
         ]);
 
-
         $cy = Course_year::create([
             'ucr_year_id' => $request['course_period'],
             'ucr_course_id' => $course->id,
@@ -73,6 +72,7 @@ class CourseController extends Controller
             'ucr_course_year_id' => $cy->id,
             'ucr_user_id' => $request['course_lecturer'],
         ]);
+
 //        $teach = Auth::Course_year_lecturer()->teaches()->syncWithoutDetaching($request->ucr_course_year_lecturer_id,['couse_year']);
 //        $lect = Auth::Course_year_lecturer()->lect()->syncWithoutDetaching($request->ucr_course_year_lecturer_id,['couse_year']);
         return redirect()->route('admin.course.index');

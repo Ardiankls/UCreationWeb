@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Models\course_year_lecturer;
 use App\Models\Creation;
+use App\Models\Creation_student;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -31,10 +32,11 @@ class CreationController extends Controller
      */
     public function create()
     {
+        $pages = 'creation';
         $courses = course_year_lecturer::all();
         $students = User::where('role_id', '=', 1)
             ->get();
-        return view('admin.creation.create', compact('courses', 'students'));
+        return view('admin.creation.create', compact('courses', 'students', 'pages'));
 
         //
     }
@@ -69,6 +71,12 @@ class CreationController extends Controller
             'creator_team'=>$request['creator_team'],
             'ucr_course_year_lecturer_id'=>$request['course_name'],
          ]);
+
+        $cs = Creation_student::create([
+            'ucr_creation_id'=>$creation->id,
+            'ucr_user_id'=>Auth::id(),
+        ]);
+
         return redirect()->route('admin.creation.index');
 
 

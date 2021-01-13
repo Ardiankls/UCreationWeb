@@ -59,6 +59,13 @@ class User extends Authenticatable
 
     }
 
+    public function creates(){
+
+        return $this->belongsToMany(Creation::class, 'ucr_creation_students', 'ucr_user_id',
+            'ucr_creation_student_id');
+
+    }
+
     public function detailable() {
         return $this->morphTo();
     }
