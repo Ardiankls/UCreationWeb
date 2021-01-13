@@ -3,6 +3,12 @@
 namespace App\Http\Controllers\lecturer;
 
 use App\Http\Controllers\Controller;
+use App\Models\Course;
+use App\Models\Course_year;
+use App\Models\course_year_lecturer;
+use App\Models\department;
+use App\Models\User;
+use App\Models\year;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -14,7 +20,9 @@ class CourseController extends Controller
      */
     public function index()
     {
-        //
+        $courses = course_year_lecturer::all();
+        $pages = 'course';
+        return view('lecturer.course.list', compact('courses', 'pages'));
     }
 
     /**
@@ -35,7 +43,7 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
@@ -55,9 +63,14 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Course $course)
     {
-        //
+        $pages = 'course';
+        $departments = department::all();
+        $periods = year::all();
+        $lecturers = User::where('role_id', '=', 2)
+            ->get();
+        return view('lecturer.course.edit', compact('course', 'pages', 'departments', 'periods', 'lecturers'));
     }
 
     /**
@@ -67,9 +80,11 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Course $course)
     {
-        //
+        $course->update($request->all());
+
+        return redirect()->route('lecturer.course.list');
     }
 
     /**
@@ -78,8 +93,9 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(course_year_lecturer $course)
     {
-        //
+        $course->delete();
+        return redirect()->back();
     }
 }
