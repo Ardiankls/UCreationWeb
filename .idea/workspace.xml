@@ -3,8 +3,34 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f926e0b-4d8a-421e-a421-57a36b887e24" name="Default Changelist" comment="" />
+    <list default="true" id="4f926e0b-4d8a-421e-a421-57a36b887e24" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/staff/course/list.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/staff/creation/detail.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/staff/creation/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/staff/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/staff/CourseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/staff/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/staff/index.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -151,12 +177,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/staff" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="discord-application" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\UCreationWeb\resources\views\staff" />
+      <recent name="C:\xampp\htdocs\UCreationWeb\resources\views\staff\profile" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\xampp\htdocs\UCreation\resources\views\student" />
       <recent name="D:\xampp\htdocs\UCreation\resources\views\student\creation" />
@@ -220,6 +250,18 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="423" y="174" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610188769348">
       <screen x="0" y="0" width="1366" height="768" />
@@ -229,9 +271,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="413" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.768@0.0.1366.768" timestamp="1607654265454" />
-    <state x="413" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610476399577">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state x="580" y="188" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610548187865">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="580" y="188" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1360.20.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1610548187865" />
     <state x="413" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.768@0.0.1366.768" timestamp="1610476399577" />
     <state x="446" y="294" key="ComposerInitDialogKey" timestamp="1608159271713">
       <screen x="0" y="0" width="1366" height="768" />
