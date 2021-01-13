@@ -22,7 +22,7 @@ class CourseController extends Controller
     {
         $courses = course_year_lecturer::all();
         $pages = 'course';
-        return view('lecturer.course.index', compact('courses', 'pages'));
+        return view('lecturer.course.list', compact('courses', 'pages'));
     }
 
     /**
@@ -70,7 +70,7 @@ class CourseController extends Controller
         $periods = year::all();
         $lecturers = User::where('role_id', '=', 2)
             ->get();
-        return view('lecturer.course.edit', compact('course', 'pages', 'departments', 'periods', 'lecturers'));
+        return view('lecturer.course.update', compact('course', 'pages', 'departments', 'periods', 'lecturers'));
     }
 
     /**
@@ -84,7 +84,7 @@ class CourseController extends Controller
     {
         $course->update($request->all());
 
-        return redirect()->route('lecturer.course.list');
+        return redirect()->route('lecturer.course.index');
     }
 
     /**
