@@ -22,7 +22,7 @@ class CourseController extends Controller
     {
         $courses = course_year_lecturer::all();
         $pages = 'course';
-        return view('lecturer.course.list', compact('courses', 'pages'));
+        return view('lecturer.course.index', compact('courses', 'pages'));
     }
 
     /**
@@ -32,7 +32,7 @@ class CourseController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
