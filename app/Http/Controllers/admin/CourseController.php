@@ -14,6 +14,7 @@ use App\Models\year;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use PhpParser\Builder;
 
 class CourseController extends Controller
 {
@@ -58,17 +59,19 @@ class CourseController extends Controller
     {
         //
         $pages = 'course';
-        for ($i = 1; $i <= $request['count'];$i++){
-            $course = Course::create([
-                'name' => $request['name_course'],
-                'date'=>'',
-                ''
-            ]);
 
-            $cy = Course_year::create([
-                'ucr_year_id' => $request['course_period'],
-                'ucr_course_id' => $course->id,
-            ]);
+        $course = Course::create([
+            'name' => $request['name_course'],
+            'date'=>'',
+            ''
+        ]);
+
+        $cy = Course_year::create([
+            'ucr_year_id' => $request['course_period'],
+            'ucr_course_id' => $course->id,
+        ]);
+        for ($i = 1; $i <= $request['count'];$i++){
+
 //
             $cyl = Course_year_lecturer::create([
                 'ucr_course_year_id' => $cy->id,
@@ -92,18 +95,21 @@ class CourseController extends Controller
     {
         //
         $pages = 'course';
-        $course =course_year_lecturer::findOrFail($id);
 
-//        $courseyear = DB::table('ucr_creations')->where('ucr_course_year_id',$id);
-//        dd($courseyear);
+        $course =course_year_lecturer::findOrFail($id);
+        $creations = Creation::where('ucr_course_year_id',$id)->get();
+
+//        $creations = Course_year::whereHas('projects', function (Builder $query){
+//            $query->where('ucr_creation_id','=')
+//        })
 
 //        $courses = Course_year::all()->except($id)->pluck('id');
 //        $creationList = Creation::whereNotIn('id', function ($query)use($courses){
 //            $query->select('creation_id')->from('ucr_creation');
-//        });
+//        })
 //        ->where('role_id', 3)->get();
 //        $courses =
-        return view('admin.course.details.detail', compact('pages', 'course'));
+        return view('admin.course.details.detail', compact('pages', 'course', 'creations'));
 
 
     }

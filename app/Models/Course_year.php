@@ -23,7 +23,7 @@ class Course_year extends Model
     }
 
     public function projects(){
-    return $this->hasMany(Creation::class);
+    return $this->hasMany(Creation::class,'ucr_course_year_id','id');
     }
 
 //    public function projects(){
