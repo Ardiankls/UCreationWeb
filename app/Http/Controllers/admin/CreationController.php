@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Course_year;
 use App\Models\course_year_lecturer;
 use App\Models\Creation;
 use App\Models\Creation_student;
@@ -33,7 +34,7 @@ class CreationController extends Controller
     public function create()
     {
         $pages = 'creation';
-        $courses = course_year_lecturer::all();
+        $courses = Course_year::all();
         $students = User::where('role_id', '=', 1)
             ->get();
         return view('admin.creation.create', compact('courses', 'students', 'pages'));
@@ -69,7 +70,7 @@ class CreationController extends Controller
             'picture'=>$imgName,
             'created_by'=>Auth::id(),
             'creator_team'=>$request['creator_team'],
-            'ucr_course_year_lecturer_id'=>$request['course_name'],
+            'ucr_course_year_id'=>$request['course_name'],
          ]);
 
         $cs = Creation_student::create([

@@ -19,7 +19,7 @@ class course_year_lecturer extends Pivot
 
 
 public function lecturer(){
-    return $this->belongsTo(Course_year::class, 'ucr_course_year_id', 'id');
+    return $this->belongsTo(Course_year::class, 'ucr_course_year_id');
 }
 
 public function teach(){

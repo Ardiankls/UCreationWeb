@@ -22,6 +22,13 @@ class Course_year extends Model
 
     }
 
+    public function projects(){
+    return $this->hasMany(Creation::class);
+    }
+
+//    public function projects(){
+//        return $this->hasManyThrough(course_year_lecturer::class,Creation::class);
+//    }
     public function courses(){
         return $this->belongsTo(Course::class, 'ucr_course_id', 'id');
     }

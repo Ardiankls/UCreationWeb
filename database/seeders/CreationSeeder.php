@@ -25,7 +25,7 @@ class CreationSeeder extends Seeder
         $creation->created_by='6';
         $creation->creator_team='7';
         $creation->status = '0';
-        $creation->ucr_course_year_lecturer_id = '1';
+        $creation->ucr_course_year_id = '1';
         $creation->save();
 
         $creation = new Creation();
@@ -38,7 +38,7 @@ class CreationSeeder extends Seeder
         $creation->created_by='7';
         $creation->creator_team='6';
         $creation->status = '1';
-        $creation->ucr_course_year_lecturer_id = '1';
+        $creation->ucr_course_year_id = '1';
         $creation->save();
 
         $creation = new Creation();
@@ -51,7 +51,7 @@ class CreationSeeder extends Seeder
         $creation->created_by='6';
         $creation->creator_team='7';
         $creation->status = '0';
-        $creation->ucr_course_year_lecturer_id = '1';
+        $creation->ucr_course_year_id = '1';
         $creation->save();
 
         $creation = new Creation();
@@ -64,7 +64,7 @@ class CreationSeeder extends Seeder
         $creation->created_by='7';
         $creation->creator_team='6';
         $creation->status = '0';
-        $creation->ucr_course_year_lecturer_id = '2';
+        $creation->ucr_course_year_id = '2';
         $creation->save();
 
         $creation = new Creation();
@@ -77,7 +77,7 @@ class CreationSeeder extends Seeder
         $creation->created_by='6';
         $creation->creator_team='7';
         $creation->status = '0';
-        $creation->ucr_course_year_lecturer_id = '3';
+        $creation->ucr_course_year_id = '3';
         $creation->save();
 
         $creation = new Creation();
@@ -90,7 +90,7 @@ class CreationSeeder extends Seeder
         $creation->created_by='7';
         $creation->creator_team='6';
         $creation->status = '1';
-        $creation->ucr_course_year_lecturer_id = '4';
+        $creation->ucr_course_year_id = '4';
         $creation->save();
     }
 }

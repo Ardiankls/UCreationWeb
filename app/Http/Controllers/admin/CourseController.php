@@ -8,6 +8,7 @@ use App\Models\Course_year;
 use App\Models\course_year_lecturer;
 use App\Models\Creation;
 use App\Models\department;
+use App\Models\Lecturer;
 use App\Models\User;
 use App\Models\year;
 use Illuminate\Http\Request;
@@ -57,21 +58,24 @@ class CourseController extends Controller
     {
         //
         $pages = 'course';
-        $course = Course::create([
-            'name' => $request['name_course'],
-            'date'=>'',
-            ''
-        ]);
+        for ($i = 1; $i <= $request['count'];$i++){
+            $course = Course::create([
+                'name' => $request['name_course'],
+                'date'=>'',
+                ''
+            ]);
 
-        $cy = Course_year::create([
-            'ucr_year_id' => $request['course_period'],
-            'ucr_course_id' => $course->id,
-        ]);
+            $cy = Course_year::create([
+                'ucr_year_id' => $request['course_period'],
+                'ucr_course_id' => $course->id,
+            ]);
 //
-        $cyl = Course_year_lecturer::create([
-            'ucr_course_year_id' => $cy->id,
-            'ucr_user_id' => $request['course_lecturer'],
-        ]);
+            $cyl = Course_year_lecturer::create([
+                'ucr_course_year_id' => $cy->id,
+                'ucr_user_id' => $request['course_lecturer'.$i],
+            ]);
+        }
+
 
 //        $teach = Auth::Course_year_lecturer()->teaches()->syncWithoutDetaching($request->ucr_course_year_lecturer_id,['couse_year']);
 //        $lect = Auth::Course_year_lecturer()->lect()->syncWithoutDetaching($request->ucr_course_year_lecturer_id,['couse_year']);
@@ -87,6 +91,20 @@ class CourseController extends Controller
     public function show($id)
     {
         //
+        $pages = 'course';
+        $course =course_year_lecturer::findOrFail($id);
+
+//        $courseyear = DB::table('ucr_creations')->where('ucr_course_year_id',$id);
+//        dd($courseyear);
+
+//        $courses = Course_year::all()->except($id)->pluck('id');
+//        $creationList = Creation::whereNotIn('id', function ($query)use($courses){
+//            $query->select('creation_id')->from('ucr_creation');
+//        });
+//        ->where('role_id', 3)->get();
+//        $courses =
+        return view('admin.course.details.detail', compact('pages', 'course'));
+
 
     }
 
@@ -96,16 +114,16 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Course $course
-    )
+    public function edit(course_year_lecturer $course)
     {
         //
         $pages = 'course';
+
         $departments = department::all();
         $periods = year::all();
         $lecturers = User::where('role_id', '=', 2)
             ->get();
-        return view('admin.course.edit', compact('course', 'pages', 'departments', 'periods', 'lecturers'));
+        return view('admin.course.edit', compact('pages', 'course','departments','periods','lecturers'));
     }
 
     /**
@@ -115,10 +133,13 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
-    public function update(Request $request, Course $course)
+    public function update( course_year_lecturer $course)
     {
         //
-        $course->update($request->all());
+        $course->update();
+        $course->lecturer->update();
+        $course->lecturer->courses->update();
+//        $course->update($request->all());
 
 //        return redirect()->route('admin.course.update');
         return redirect()->route('admin.course.index');
@@ -134,6 +155,8 @@ class CourseController extends Controller
     {
         //
         $course->delete();
+        $course->lecturer->delete();
+        $course->lecturer->courses->delete();
         return redirect()->back();
     }
 }

@@ -41,8 +41,11 @@
                             <td class="d-flex">
                                 <form action="{{ route('admin.course.edit', $course) }}">
                                     @csrf
-
                                     <button type="submit" class="btn btn-primary">Edit</button>
+                                </form>
+                                <form action="{{ route('admin.course.show', $course) }}">
+                                    @csrf
+                                    <button type="submit" class="btn btn-primary">Detail</button>
                                 </form>
                                 <form action="{{ route('admin.course.destroy', $course) }}" method="post">
                                     @csrf

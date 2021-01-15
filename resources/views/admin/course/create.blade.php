@@ -24,16 +24,34 @@
                 </select>
             </div>
             <div class="form-group"><label>Lecturer</label>
-                <select name="course_lecturer" class="custom-select">
-                                        @foreach ($lecturers as $user)
-                                            <option value="{{ $user->id }}" required>
-                                                {{ $user->name }} </option>
-                                        @endforeach
-                </select>
+{{--                <select name="course_lecturer" class="custom-select">--}}
+{{--                                        @foreach ($lecturers as $user)--}}
+{{--                                            <option value="{{ $user->id }}" required>--}}
+{{--                                                {{ $user->name }} </option>--}}
+{{--                                        @endforeach--}}
+{{--                </select>--}}
+
+{{--                Ini buat type hidden karena buat nampung value dari javascript--}}
+                <div class="form-group">
+                    <input class="form-control" type="hidden" name="count" VALUE="" id="count"></div>
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dynamic_field">
+                        <tr>
+                            <td><select name="course_lecturer1" class="custom-select">
+                                    @foreach ($lecturers as $user)
+                                        <option value="{{ $user->id }}" required>
+                                            {{ $user->name }} </option>
+                                    @endforeach
+                                </select></td>
+                            <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>
+                        </tr>
+                    </table>
+                    {{--                        <input type="button" name="submit" id="submit" class="btn btn-info" value="Submit" />--}}
+                </div>
             </div>
 
 
-{{--                        <div class="form-group"><label>Gender</label>--}}
+            {{--                        <div class="form-group"><label>Gender</label>--}}
 {{--                            <select class="form-control" name="gender_idol" ><optgroup label="Choose Gender" type="text"  required>--}}
 {{--                                    <option value="Male"  selected="">Male</option><option value="Female">Female</option></optgroup></select></div>--}}
 
@@ -45,4 +63,35 @@
 
     </form>
     </body>
+    <script>
+        $(document).ready(function(){
+            var i=1;
+            $('#add').click(function(){
+                i++;
+                document.getElementById('count').value = i;
+                $('#dynamic_field').append('<tr id="row'+i+'"><td><select name="course_lecturer'+i+'" class="custom-select">\n' +
+                    '                                        @foreach ($lecturers as $user)\n' +
+                    '                                            <option value="{{ $user->id }}" required>\n' +
+                    '                                                {{ $user->name }} </option>\n' +
+                    '                                        @endforeach\n' +
+                    '                                    </select></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');
+            });
+            $(document).on('click', '.btn_remove', function(){
+                var button_id = $(this).attr("id");
+                $('#row'+button_id+'').remove();
+            });
+            // $('#submit').click(function(){
+            //     $.ajax({
+            //         url:"name.php",
+            //         method:"POST",
+            //         data:$('#add_name').serialize(),
+            //         success:function(data)
+            //         {
+            //             alert(data);
+            //             $('#add_name')[0].reset();
+            //         }
+            //     });
+            // });
+        });
+    </script>
 @endsection

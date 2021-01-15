@@ -14,7 +14,7 @@
                 <select name="course_name" class="custom-select">
                                         @foreach ($courses as $course)
                                             <option value="{{ $course->id }}" required>
-                                                {{ $course->lecturer->courses->name }} </option>
+                                                {{ $course->courses->name }} </option>
                                         @endforeach
                 </select>
             </div>
@@ -31,17 +31,29 @@
                 <label for="picture">Upload Picture </label>
                 <input type="file" class="form-control-file" name="picture">
             </div>
-            <div class="form-group"><label>Creator/ Team</label>
 
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dynamic_field"> Creator's Team
+                    <tr>
+                        <td><select name="creator_team" class="custom-select">
+                                @foreach ($students as $user)
+                                    <option value="{{ $user->id }}" required>
+                                        {{ $user->name }} </option>
+                                @endforeach
+                            </select></td>
+                        <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>
+                    </tr>
+                </table>
+                {{--                        <input type="button" name="submit" id="submit" class="btn btn-info" value="Submit" />--}}
             </div>
-            <div class="form-group"><label>Creator/ Team</label>
-                <select name="creator_team" class="custom-select">
-                    @foreach ($students as $user)
-                        <option value="{{ $user->id }}" required>
-                            {{ $user->name }} </option>
-                    @endforeach
-                </select>
-            </div>
+{{--            <div class="form-group"><label>Creator/ Team</label>--}}
+{{--                <select name="creator_team" class="custom-select">--}}
+{{--                    @foreach ($students as $user)--}}
+{{--                        <option value="{{ $user->id }}" required>--}}
+{{--                            {{ $user->name }} </option>--}}
+{{--                    @endforeach--}}
+{{--                </select>--}}
+{{--            </div>--}}
             <button
                 class="btn btn-primary" type="submit" style="background-color: rgb(221,177,226);">Submit
             </button>
