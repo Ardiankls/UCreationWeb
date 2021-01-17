@@ -156,16 +156,13 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(course_year_lecturer $course)
+    public function edit(Course $course)
     {
         //
         $pages = 'course';
 
-        $departments = department::all();
-        $periods = year::all();
-        $lecturers = User::where('role_id', '=', 2)
-            ->get();
-        return view('admin.course.edit', compact('pages', 'course','departments','periods','lecturers'));
+
+        return view('admin.course.edit', compact('pages', 'course'));
     }
 
     /**
@@ -196,7 +193,7 @@ class CourseController extends Controller
     public function destroy(Course $course)
     {
         //
-        $course->years->delete();
+        $course->delete();
 
         return redirect()->back();
     }
