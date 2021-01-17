@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Course_year;
 use App\Models\course_year_lecturer;
+use App\Models\Creation_user;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
 
@@ -33,6 +34,7 @@ class DatabaseSeeder extends Seeder
             Course_yearSeeder::class,
             Course_year_lecturerSeeder::class,
             CreationSeeder::class,
+            CreationUserSeeder::class,
 
 
         ]);

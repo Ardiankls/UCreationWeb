@@ -26,8 +26,43 @@ class CourseController extends Controller
     public function index()
     {
         //
-        $courses = course_year_lecturer::all();
         $pages = 'course';
+//        $courses = course_year_lecturer::all();
+
+        $courses = Course_year::all();
+//        $lecturer = Course_year::all()->
+//        $cyl = course_year_lecturer::all();
+//        $cyl = course_year_lecturer::all();
+//        $cyl = course_year_lecturer::all()->toArray();
+
+//        nyoba pake collection :v
+//        $courseall = $courses->map(function ($courses){
+//            return collect($courses->toArray())
+//                ->only()
+//        });
+//        $courseid = Course_year::id();
+//
+//        $posts = Post::whereHas('comments', function (Builder $query) {
+//            $query->where('content', 'like', 'code%');
+//        })->get();
+//        $lecturer = course_year_lecturer::all();
+
+//        $lecturers = course_year_lecturer::has('ucr_course_year_id','=',$courses)->get('id');
+
+//        $lecturers= course_year_lecturer::whereHas('lecturer', function (Builder $query){
+//            $query->where('ucr_course_year_lecturer_id','ucr_course_year_id');
+//        })->get();
+
+//        $lecturers= User::whereHas('teaches', function (Builder $query){
+//            $query->whereHas('lecturer', function (Builder $query){
+//                $query->where('');
+//            });
+//        })->get();
+////        dd($);
+//        $lecturers= User::where('id', function ($query)use($courses){
+//            $query->select('ucr_user_id')->from('ucr_course_year_lecturer')->where('ucr_course_year_id', $courses);
+//        });
+//        dd($lecturers);
         return view('admin.course.index', compact('courses', 'pages'));
 
     }
@@ -63,7 +98,7 @@ class CourseController extends Controller
         $course = Course::create([
             'name' => $request['name_course'],
             'date'=>'',
-            ''
+            'department_id' => $request['course_department'],
         ]);
 
         $cy = Course_year::create([
@@ -98,6 +133,7 @@ class CourseController extends Controller
 
         $course =course_year_lecturer::findOrFail($id);
         $creations = Creation::where('ucr_course_year_id',$id)->get();
+        $lecturers = course_year_lecturer::where('ucr_course_year_id',$id)->get();
 
 //        $creations = Course_year::whereHas('projects', function (Builder $query){
 //            $query->where('ucr_creation_id','=')
@@ -109,7 +145,7 @@ class CourseController extends Controller
 //        })
 //        ->where('role_id', 3)->get();
 //        $courses =
-        return view('admin.course.details.detail', compact('pages', 'course', 'creations'));
+        return view('admin.course.details.detail', compact('pages', 'course', 'creations','lecturers'));
 
 
     }
@@ -157,12 +193,11 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(course_year_lecturer $course)
+    public function destroy(Course $course)
     {
         //
-        $course->delete();
-        $course->lecturer->delete();
-        $course->lecturer->courses->delete();
+        $course->years->delete();
+
         return redirect()->back();
     }
 }
