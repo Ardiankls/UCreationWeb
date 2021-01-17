@@ -27,18 +27,18 @@
                         <div class="row no-gutters">
                             @if($creation->status == 0)
                                 <div class="col-md-6">
-                                    <form action="{{route('creator.guests.approve', $creation->id)}}"
+                                    <form action="{{route('admin.creations.approve', $creation->id)}}"
                                           method="POST">
                                         {{ csrf_field() }}
-                                        <input name="event_id" type="hidden" value="{{$event->id}}">
+                                        <input name="event_id" type="hidden" value="{{$creation->id}}">
                                         <button class="btn btn-success btn-circle" title="Approve" type="submit"><i class="fas fa-check"></i></button>
                                     </form>
                                 </div>
                                 <div class="col-md-6">
-                                    <form action="{{route('creator.guests.decline', $guest->id)}}"
+                                    <form action="{{route('admin.creations.reject', $creation->id)}}"
                                           method="POST">
                                         {{ csrf_field() }}
-                                        <input name="event_id" type="hidden" value="{{$event->id}}">
+                                        <input name="event_id" type="hidden" value="{{$creation->id}}">
                                         <button class="btn btn-danger btn-circle" title="Reject" type="submit"><i class="fas fa-times"></i></button>
                                     </form>
                                 </div>

@@ -18,7 +18,6 @@ class department extends Model
     public function students(){
         return $this->hasMany(Students::class);
     }
-
     public function lecturers(){
         return $this->hasMany(Lecturers::class);
     }

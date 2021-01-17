@@ -80,18 +80,7 @@
                 var button_id = $(this).attr("id");
                 $('#row'+button_id+'').remove();
             });
-            // $('#submit').click(function(){
-            //     $.ajax({
-            //         url:"name.php",
-            //         method:"POST",
-            //         data:$('#add_name').serialize(),
-            //         success:function(data)
-            //         {
-            //             alert(data);
-            //             $('#add_name')[0].reset();
-            //         }
-            //     });
-            // });
+
         });
     </script>
 @endsection
