@@ -17,27 +17,22 @@ class CourseSeeder extends Seeder
         //
         $course = new Course();
         $course->name = 'Web Programming';
-        $course->department_id ='33';
         $course->save();
 
         $course = new Course();
         $course->name = 'Programming Technique';
-        $course->department_id ='33';
         $course->save();
 
         $course = new Course();
         $course->name = 'Web Development';
-        $course->department_id ='33';
         $course->save();
 
         $course = new Course();
         $course->name = 'Mobile App Development';
-        $course->department_id ='33';
         $course->save();
 
         $course = new Course();
         $course->name = 'Algorithm Programming';
-        $course->department_id ='33';
         $course->save();
     }
 

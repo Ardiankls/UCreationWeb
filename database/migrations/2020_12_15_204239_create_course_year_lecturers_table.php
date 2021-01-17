@@ -15,8 +15,8 @@ class CreateCourseYearLecturersTable extends Migration
     {
         Schema::create('ucr_course_year_lecturers', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('ucr_course_year_id')->constrained()->onDelete('cascade');;
-            $table->foreignId('ucr_user_id')->constrained()->onDelete('cascade');;
+            $table->foreignId('ucr_course_year_id')->constrained();
+            $table->foreignId('ucr_user_id')->constrained();
             $table->timestamps();
         });
     }

@@ -16,7 +16,6 @@ class AddForeignKeyToUcrCreations extends Migration
         Schema::table('ucr_creations', function (Blueprint $table) {
             //
             $table->foreignId('ucr_course_year_id')->constrained();
-//            $table->foreignId('ucr_user_id')->constrained();
         });
     }
 

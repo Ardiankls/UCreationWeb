@@ -20,8 +20,7 @@
                     <th scope="col">Course Name</th>
                     <th scope="col">Department</th>
                     <th scope="col">Year</th>
-{{--                    <th scope="col">lecturers</th>--}}
-                    <th></th>
+                    <th scope="col">lecturers</th>
                     <th scope="col">action</th>
                 </tr>
                 </thead>
@@ -30,23 +29,12 @@
                     <tr>
 
                         <td>{{ $course->id}}</td>
-                        <td>{{ $course->courses->name }}</td>
-                        <td>{{ $course->courses->depart->initial}}</td>
-                        <td>{{ $course->years->year }}</td>
+
+{{--                        <td>{{ $course->lecturer->courses->course->name }}</td>--}}
+                        <td>{{ $course->lecturer->courses->name }}</td>
                         <td></td>
-
-
-{{--                        @dd($courses)--}}
-
-{{--                        @foreach($courses->lecturers as $lecturer)--}}
-
-
-
-{{--                            <td>{{ $course->teach->name }}</td>--}}
-{{--                        @endforeach--}}
-
-
-
+                        <td>{{ $course->lecturer->years->year }}</td>
+                        <td>{{ $course->teach->name }}</td>
 {{--                        <td>{{ $event->status }}</td>--}}
 {{--                        <td>{{ $event->creator->name }}</td>--}}
                         @auth

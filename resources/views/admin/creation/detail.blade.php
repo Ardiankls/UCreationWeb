@@ -11,8 +11,8 @@
     <p class="proj-shortdesc mx-auto text-center     p-2 fs-6" style="color: #979BFF"> {{$creation->long_description}}</p>
 
 
-    @foreach($creators as $creator)
-    <p class="proj-shortdesc mx-auto text-center     p-2 fs-6" style="color: #979BFF"> {{$creator->creators->name}}</p>
+    @foreach($students as $student)
+    <p class="proj-shortdesc mx-auto text-center     p-2 fs-6" style="color: #979BFF"> {{$student->name}}</p>
     @endforeach
 
 

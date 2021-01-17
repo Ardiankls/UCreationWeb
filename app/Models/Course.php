@@ -11,24 +11,18 @@ class Course extends Model
     protected $table = 'ucr_courses';
 
     protected $fillable = [
-       'name','department_id'
+       'name'
 
     ];
 
 
 
-    public function depart(){
-        return $this->belongsTo(Department::class, 'department_id', 'id');
+    public function courses(){
+        return $this->belongsTo(Department::class, 'department', 'id');
     }
 
     public function years(){
-        return $this->belongsToMany(year::class, 'ucr_course_years', 'id','ucr_course_id');
+        return $this->belongsToMany(year::class, 'ucr_course_years', 'id','course_id');
     }
-//    public function courseyear(){
-//        return $this->hasMany(Course_year::class,'ucr_course_year_id','id');
-//    }
-//    public function departments(){
-//        return $this->belongsTo(Department::class, 'department', 'id');
-//    }
 
 }

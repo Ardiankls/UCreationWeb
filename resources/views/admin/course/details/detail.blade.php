@@ -9,9 +9,7 @@
         <p class="proj-shortdesc mx-auto text-center     p-2 fs-6"
            style="color: #979BFF"> {{$course->lecturer->years->year}}</p>
         <h1 class="title mx-auto text-center p-1 fs-5 font-weight-bold" style="color: #979BFF">Lecturer:</h1>
-        @foreach($lecturers as $lecturer)
-        <p class="proj-shortdesc mx-auto text-center     p-2 fs-6" style="color: #979BFF"> {{$lecturer->teach->name }}</p>
-        @endforeach
+        <p class="proj-shortdesc mx-auto text-center     p-2 fs-6" style="color: #979BFF"> {{$course->teach->name }}</p>
         <div class="row">
             @include('admin.course.details.creation_list')
         </div>

@@ -21,10 +21,11 @@ class CreationSeeder extends Seeder
         $creation->course = '1';
         $creation->short_description ='just short';
         $creation->long_description = 'very long';
-        $creation->picture = 'asd';
+        $creation->picture = '';
+        $creation->created_by='6';
+        $creation->creator_team='7';
         $creation->status = '0';
         $creation->ucr_course_year_id = '1';
-//        $creation->ucr_user_id = '9';
         $creation->save();
 
         $creation = new Creation();
@@ -33,10 +34,11 @@ class CreationSeeder extends Seeder
         $creation->course = '1';
         $creation->short_description ='just short';
         $creation->long_description = 'very long';
-        $creation->picture = 'asd';
+        $creation->picture = '';
+        $creation->created_by='7';
+        $creation->creator_team='6';
         $creation->status = '1';
         $creation->ucr_course_year_id = '1';
-//        $creation->ucr_user_id = '10';
         $creation->save();
 
         $creation = new Creation();
@@ -45,10 +47,11 @@ class CreationSeeder extends Seeder
         $creation->course = '1';
         $creation->short_description ='just short';
         $creation->long_description = 'very long';
-        $creation->picture = 'dsa';
+        $creation->picture = '';
+        $creation->created_by='6';
+        $creation->creator_team='7';
         $creation->status = '0';
         $creation->ucr_course_year_id = '1';
-//        $creation->ucr_user_id = '9';
         $creation->save();
 
         $creation = new Creation();
@@ -57,10 +60,11 @@ class CreationSeeder extends Seeder
         $creation->course = '2';
         $creation->short_description ='just short';
         $creation->long_description = 'very long';
-        $creation->picture = 'sad';
+        $creation->picture = '';
+        $creation->created_by='7';
+        $creation->creator_team='6';
         $creation->status = '0';
         $creation->ucr_course_year_id = '2';
-//        $creation->ucr_user_id = '10';
         $creation->save();
 
         $creation = new Creation();
@@ -69,10 +73,11 @@ class CreationSeeder extends Seeder
         $creation->course = '3';
         $creation->short_description ='just short';
         $creation->long_description = 'very long';
-        $creation->picture = 'sdsa';
+        $creation->picture = '';
+        $creation->created_by='6';
+        $creation->creator_team='7';
         $creation->status = '0';
         $creation->ucr_course_year_id = '3';
-//        $creation->ucr_user_id = '9';
         $creation->save();
 
         $creation = new Creation();
@@ -81,10 +86,11 @@ class CreationSeeder extends Seeder
         $creation->course = '4';
         $creation->short_description ='just short';
         $creation->long_description = 'very long';
-        $creation->picture = 'ds';
+        $creation->picture = '';
+        $creation->created_by='7';
+        $creation->creator_team='6';
         $creation->status = '1';
-        $creation->ucr_course_year_id = '5';
-//        $creation->ucr_user_id = '10';
+        $creation->ucr_course_year_id = '4';
         $creation->save();
     }
 }

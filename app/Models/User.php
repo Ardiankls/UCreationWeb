@@ -52,17 +52,10 @@ class User extends Authenticatable
         return $this->belongsTo(Role::class,'role_id', 'id');
     }
 
-//    public function teaches(){
-//
-//        return $this->belongsToMany(Course_year::class, 'ucr_course_year_lecturers', 'ucr_user_id',
-//            'ucr_course_year_id');
-//
-//    }
-
     public function teaches(){
 
-        return $this->belongsToMany(Course_year::class, 'ucr_course_year_lecturers', 'ucr_course_year_id',
-            'ucr_user_id');
+        return $this->belongsToMany(Course_year::class, 'ucr_course_year_lecturers', 'ucr_user_id',
+            'ucr_course_year_id');
 
     }
 
