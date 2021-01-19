@@ -74,8 +74,12 @@ class User extends Authenticatable
     }
 
     public function detailable() {
-        return $this->morphTo();
+        return $this->morphTo(__FUNCTION__,'detailable_type', 'detailable_id');
     }
+
+//    public function detailable() {
+//        return $this->morphTo();
+//    }
 
     public function isAdmin()
     {

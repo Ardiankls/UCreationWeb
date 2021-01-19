@@ -74,10 +74,16 @@
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
-                                <a class="dropdown-item" href=""
-                                   onclick="event.preventDefault();">
+                                    @if(Auth()->user()->isAdmin())<a class="dropdown-item" href="{{ route('admin.user.index',\Illuminate\Support\Facades\Auth::id()) }}"@endif
+                                    @if(Auth()->user()->isLecturer())<a class="dropdown-item" href="{{ route('admin.user.index',\Illuminate\Support\Facades\Auth::id()) }}"@endif
+                                    @if(Auth()->user()->isStaff())<a class="dropdown-item" href="{{ route('admin.user.index',\Illuminate\Support\Facades\Auth::id()) }}"@endif
+                                    @if(Auth()->user()->isStudent())<a class="dropdown-item" href="{{ route('admin.user.index',\Illuminate\Support\Facades\Auth::id()) }}"@endif
+                                   onclick="event.preventDefault();
+                                                             ">
                                     {{ __('Profile') }}
-                                </a>
+                                    </a>
+
+
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

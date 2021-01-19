@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
+use App\Models\Staff;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -15,6 +17,16 @@ class UserController extends Controller
     public function index()
     {
         //
+
+        $staff = Staff::find(1);
+        $user = $staff ->users;
+
+//        $admin = Staff::with('users')->get();
+//
+//        $detail = $admin->users;
+
+
+        return view('admin.profile.detail',compact('staff', 'user'));
     }
 
     /**
@@ -47,6 +59,7 @@ class UserController extends Controller
     public function show($id)
     {
         //
+
     }
 
     /**

@@ -9,12 +9,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <style>
         body {
+            overflow-y: hidden;
             font-family: 'Raleway';
         }
     </style>
-    <div class="container-fluid" style="background-color: blue; height: 100%;">
-        <div class="container">
-
+    <div class="container-fluid " style="background-image: linear-gradient(to left, #3a3afb, #3545fc, #324ffc, #3158fc, #3260fc, #3b64fc, #4267fc, #496bfc, #546cfd, #5e6dfe, #676efe, #6f6fff); height: 100%;">
+        <div class="container " style="" >
+                <img  class="img-fluid" src="{{ asset('img/ucreationlogo.png') }}">
+            </div>
 
             <div class="row ">
                 <div class="col-9 " >
