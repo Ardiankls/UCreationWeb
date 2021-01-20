@@ -18,8 +18,9 @@ class CreationController extends Controller
     public function index()
     {
         //
-        $creations = Creation::all();
+        $creations = creation::where('status', '1')->get();
         return CreationResource::collection($creations);
+        
     }
 
     /**

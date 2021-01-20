@@ -101,7 +101,14 @@
         </div>
     </nav>
 
-    <main class="py-4">
+    <main class="py-4" style="z-index: 100">
+        <div class="container d-block " style="" >
+            <img  class="img-fluid position-absolute" src="{{ asset('img/circlelavender3.png') }}">
+            <img  class="img-fluid  "  src="{{ asset('img/circlepink.png') }}">
+        </div>
+
+
+
         @yield('content')
     </main>
 </div>
