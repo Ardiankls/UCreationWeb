@@ -52,16 +52,34 @@ class User extends Authenticatable
         return $this->belongsTo(Role::class,'role_id', 'id');
     }
 
+//    public function teaches(){
+//
+//        return $this->belongsToMany(Course_year::class, 'ucr_course_year_lecturers', 'ucr_user_id',
+//            'ucr_course_year_id');
+//
+//    }
+
     public function teaches(){
 
-        return $this->belongsToMany(Course_year::class, 'ucr_course_year_lecturers', 'ucr_user_id',
-            'ucr_course_year_id');
+        return $this->belongsToMany(Course_year::class, 'ucr_course_year_lecturers', 'ucr_course_year_id',
+            'ucr_user_id');
+
+    }
+
+    public function creates(){
+
+        return $this->belongsToMany(Creation::class, 'ucr_creation_students', 'ucr_user_id',
+            'ucr_creation_student_id');
 
     }
 
     public function detailable() {
-        return $this->morphTo();
+        return $this->morphTo(__FUNCTION__,'detailable_type', 'detailable_id');
     }
+
+//    public function detailable() {
+//        return $this->morphTo();
+//    }
 
     public function isAdmin()
     {

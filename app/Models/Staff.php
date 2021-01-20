@@ -23,6 +23,7 @@ class Staff extends Model
         'title_id'
     ];
 
+
     public function staff(){
         return $this->belongsTo(Title::class, 'title', 'id');
     }

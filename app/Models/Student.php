@@ -25,9 +25,6 @@ class Student extends Model
         return $this->belongsTo(Department::class, 'department', 'id');
     }
 
-    public function creates(){
-        return $this->belongsToMany(Creation::class)->withPivot('created')->withTimestamps();
-    }
 
     public function users(){
         return $this->morphOne('App\Models\User', 'detailable');
