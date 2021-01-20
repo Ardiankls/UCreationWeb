@@ -10,7 +10,7 @@
         <p class="proj-shortdesc mx-auto text-center     p-2 fs-6" style="color: #979BFF"> {{$creation->long_description}}</p>
     </div>
 
-    <div class="container-sm bg-white p-2 shadow-sm mt-3" style="border-radius: 15px;">
+    <div class="container-sm bg-white p-2 shadow-sm mt-3 " style="border-radius: 15px; background-color: white; %;">
         <h1 class="title mx-auto text-center p-1 fs-5 font-weight-bold" style="color: #979BFF">Creators</h1>
         <div class="row d-flex ">
 
