@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\department;
 use App\Models\User;
 use App\Models\Staff;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -18,15 +20,12 @@ class UserController extends Controller
     {
         //
 
-        $staff = Staff::find(1);
-        $user = $staff ->users;
-
-//        $admin = Staff::with('users')->get();
-//
-//        $detail = $admin->users;
 
 
-        return view('admin.profile.detail',compact('staff', 'user'));
+
+        return view('admin.profile.detail');
+
+
     }
 
     /**

@@ -16,8 +16,23 @@ class LecturerSeeder extends Seeder
     {
         //
         $lecturer =new Lecturer();
-        $lecturer->nip = '0001';
-        $lecturer->nidn = '0001';
+        $lecturer->nip = '10201';
+        $lecturer->nidn = '0002';
+        $lecturer->name = 'ardian';
+        $lecturer->email = 'ardian@lecturer.com';
+        $lecturer->description= '';
+        $lecturer->photo ='' ;
+        $lecturer->gender = 'M';
+        $lecturer->phone = '0123456';
+        $lecturer->line_account = 'ardlec';
+        $lecturer->department_id = '8';
+        $lecturer->title_id = '3';
+        $lecturer->jaka_id = '1';
+        $lecturer->save();
+
+        $lecturer =new Lecturer();
+        $lecturer->nip = '1001';
+        $lecturer->nidn = '0601';
         $lecturer->name = 'kevin';
         $lecturer->email = 'kevin@lecturer.com';
         $lecturer->description= '';
@@ -31,8 +46,8 @@ class LecturerSeeder extends Seeder
         $lecturer->save();
 
         $lecturer =new Lecturer();
-        $lecturer->nip = '0002';
-        $lecturer->nidn = '0002';
+        $lecturer->nip = '421';
+        $lecturer->nidn = '00312302';
         $lecturer->name = 'fadhel';
         $lecturer->email = 'fadhel@lecturer.com';
         $lecturer->description= '';
