@@ -18,9 +18,11 @@ class UserController extends Controller
     public function index()
     {
         //
-        $users = User::find(Auth::user());
-        $profile = $users->detailable;
-        return UserResource::collection($profile);
+        $users = User::where('id', Auth::id())->get();
+//        $profile = $users->detailable;
+
+        return UserResource::collection($users);
+
     }
 
     /**
