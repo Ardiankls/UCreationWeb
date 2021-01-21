@@ -29,7 +29,7 @@ class UserController extends Controller
             $query->where('ucr_user_id', Auth::id());
         })->get()
         ;
-        dd($creations);
+//        dd($creations);
 //        foreach ( $creations as $creation) {
 //            $creation;
 //        }

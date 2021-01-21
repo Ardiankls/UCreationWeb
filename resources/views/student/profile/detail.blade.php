@@ -35,16 +35,12 @@
                         </picture>
                     </div>
                     <div class="col-sm-7" style="color: #979BFF">
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->nip}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->name}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->email}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->gender}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->phone}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->line_account}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->department->name}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->title->name}}</p>
-
-
+                        <p>NIP     : {{\Illuminate\Support\Facades\Auth::user()->detailable->nip}}</p>
+                        <p>Name    : {{\Illuminate\Support\Facades\Auth::user()->detailable->name}}</p>
+                        <p>Email   :{{\Illuminate\Support\Facades\Auth::user()->detailable->email}}</p>
+                        <p>Gender  :{{\Illuminate\Support\Facades\Auth::user()->detailable->gender}}</p>
+                        <p>Phone   :{{\Illuminate\Support\Facades\Auth::user()->detailable->phone}}</p>
+                        <p>Line :{{\Illuminate\Support\Facades\Auth::user()->detailable->line_account}}</p>
                     </div>
                 </div>
             </div>

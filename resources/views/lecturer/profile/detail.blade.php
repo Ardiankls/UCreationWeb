@@ -41,10 +41,6 @@
                         <p>Gender  :{{\Illuminate\Support\Facades\Auth::user()->detailable->gender}}</p>
                         <p>Phone   :{{\Illuminate\Support\Facades\Auth::user()->detailable->phone}}</p>
                         <p>Line :{{\Illuminate\Support\Facades\Auth::user()->detailable->line_account}}</p>
-{{--                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->department}}</p>--}}
-{{--                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->title}}</p>--}}
-
-
                     </div>
                 </div>
             </div>
