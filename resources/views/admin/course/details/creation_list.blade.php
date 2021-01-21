@@ -22,7 +22,9 @@
 
                     <td>{{ $creation->id}}</td>
                     <td>{{ $creation->name }}</td>
-{{--                    <td>{{$creators->name}}</td>--}}
+                    <td> @foreach($creation->creations as $creator)
+                       {{$creator->name}}
+                    @endforeach</td>
 {{--                    <td>{{ $creation->created_by }}</td>--}}
                     <td>@if($creation->status == 0) <p class="text-warning">Pending</p>
                         @elseif($creation->status == 1) <p class="text-success">Approved</p>

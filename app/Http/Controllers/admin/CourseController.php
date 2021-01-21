@@ -135,12 +135,13 @@ class CourseController extends Controller
         $course =course_year_lecturer::findOrFail($id);
         $creations = Creation::where('ucr_course_year_id',$id)->get();
 
-        $own = Creation::where('ucr_course_year_id',$id)->pluck('id');
+//        $own = Creation::where('ucr_course_year_id',$id)->pluck('id');
 
-        $creator = Creation_user::where('ucr_creation_id', $own)->pluck('ucr_user_id');
-        $creators = User::where('id',$creator)->get();
+//        $creator = Creation_user::where('ucr_creation_id', $own)->pluck('ucr_user_id');
+//        $creators = User::where('id',$creator)->get();
         $lecturers = course_year_lecturer::where('ucr_course_year_id',$id)->get();
-//        dd($creators);
+//        $creationss =Creation::all()->pluck();
+//        dd($creationss);
 
 //        dd($creations);
 
@@ -154,7 +155,7 @@ class CourseController extends Controller
 //        })
 //        ->where('role_id', 3)->get();
 //        $courses =
-        return view('admin.course.details.detail', compact('pages', 'course', 'creations','lecturers','creators'));
+        return view('admin.course.details.detail', compact('pages', 'course', 'creations','lecturers'));
 
 
     }
@@ -169,9 +170,10 @@ class CourseController extends Controller
     {
         //
         $pages = 'course';
-
-
-        return view('admin.course.edit', compact('pages', 'course'));
+        $departments = department::all();
+        $periods = year::all();
+        $lecturers = User::all();
+        return view('admin.course.edit', compact('pages', 'course','departments','periods','lecturers'));
     }
 
     /**
