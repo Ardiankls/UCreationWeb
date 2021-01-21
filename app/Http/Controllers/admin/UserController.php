@@ -24,14 +24,15 @@ class UserController extends Controller
 //        $user = User::find(Auth::id());
         $usercreations = Creation_user::where('ucr_user_id', Auth::id())->pluck('ucr_creation_id');
 //        $creationsof = Creation_user::where('id', $usercreations)->get();
-        $creations = Creation::where('id', $usercreations)->get();
+        $creationss = Creation::where('id', $usercreations)->get();
 //        foreach ( $creations as $creation) {
 //            $creation;
 //        }
+//        dd($creation);
 
 
 
-        return view('admin.profile.detail', compact('creations'));
+        return view('admin.profile.detail', compact('creationss'));
 
 
     }

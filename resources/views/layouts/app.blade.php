@@ -23,7 +23,7 @@
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
+<body style="overflow-x: hidden">
 <div id="app">
     <nav class="navbar shadow col-11 navbar-expand-lg navbar-light bg-light rounded-3"
          style="margin-left: 1em; margin-top: 0.5em;  ">
@@ -102,9 +102,11 @@
     </nav>
     <div class="container d-block position-absolute" style=" z-index: -1000" >
         <img  class="img-fluid " src="{{ asset('img/circlelavender3.png') }}">
-        <img  class="img-fluid  "  src="{{ asset('img/circlepink.png') }}">
-    </div>
 
+    </div>
+    <div class="container d-block position-absolute " style=" z-index: -1001; left: 1200px; bottom: 500px; max-width: 100%;" >
+        <img  class="img-fluid  " src="{{ asset('img/circlepink.png') }}">
+    </div>
     <main class="py-4" style="z-index: 100">
 
 

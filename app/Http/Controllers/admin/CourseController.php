@@ -7,6 +7,7 @@ use App\Models\Course;
 use App\Models\Course_year;
 use App\Models\course_year_lecturer;
 use App\Models\Creation;
+use App\Models\Creation_user;
 use App\Models\department;
 use App\Models\Lecturer;
 use App\Models\User;
@@ -133,7 +134,15 @@ class CourseController extends Controller
 
         $course =course_year_lecturer::findOrFail($id);
         $creations = Creation::where('ucr_course_year_id',$id)->get();
+
+        $own = Creation::where('ucr_course_year_id',$id)->pluck('id');
+
+        $creator = Creation_user::where('ucr_creation_id', $own)->pluck('ucr_user_id');
+        $creators = User::where('id',$creator)->get();
         $lecturers = course_year_lecturer::where('ucr_course_year_id',$id)->get();
+//        dd($creators);
+
+//        dd($creations);
 
 //        $creations = Course_year::whereHas('projects', function (Builder $query){
 //            $query->where('ucr_creation_id','=')
@@ -145,7 +154,7 @@ class CourseController extends Controller
 //        })
 //        ->where('role_id', 3)->get();
 //        $courses =
-        return view('admin.course.details.detail', compact('pages', 'course', 'creations','lecturers'));
+        return view('admin.course.details.detail', compact('pages', 'course', 'creations','lecturers','creators'));
 
 
     }

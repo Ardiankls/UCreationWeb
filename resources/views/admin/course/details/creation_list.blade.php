@@ -2,7 +2,7 @@
     <h1 class="h4 mb-0 font-weight-bold text-primary" style="margin-top: 0.2em;">{{$course->name}} Creations</h1>
 </div>
     <div class="row" style="margin-top: 30px;">
-        <table class="table table-striped">
+        <table class="table-dark table-striped text-center">
             <thead>
             <tr>
                 <th scope="col">ID</th>
@@ -12,14 +12,18 @@
                 <th scope="col">Action</th>
             </tr>
             </thead>
+
             <tbody>
+                                <td>{{$creators->name}}</td>
+
             @foreach($creations as $creation)
 {{--                @foreach($courses as $creation)--}}
                 <tr>
 
                     <td>{{ $creation->id}}</td>
                     <td>{{ $creation->name }}</td>
-                    <td>{{ $creation->created_by }}</td>
+{{--                    <td>{{$creators->name}}</td>--}}
+{{--                    <td>{{ $creation->created_by }}</td>--}}
                     <td>@if($creation->status == 0) <p class="text-warning">Pending</p>
                         @elseif($creation->status == 1) <p class="text-success">Approved</p>
                         @else <p class="text-danger">Rejected</p> @endif </td>

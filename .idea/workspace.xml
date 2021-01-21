@@ -219,7 +219,14 @@
       <workItem from="1610995508157" duration="341000" />
       <workItem from="1610995905111" duration="1490000" />
       <workItem from="1610997587550" duration="62000" />
-      <workItem from="1610997694602" duration="39698000" />
+      <workItem from="1610997694602" duration="49080000" />
+      <workItem from="1611133079952" duration="7202000" />
+      <workItem from="1611140982565" duration="376000" />
+      <workItem from="1611206658549" duration="1046000" />
+      <workItem from="1611219686130" duration="733000" />
+      <workItem from="1611221011679" duration="624000" />
+      <workItem from="1611221758087" duration="9332000" />
+      <workItem from="1611242603325" duration="903000" />
     </task>
     <servers />
   </component>
@@ -243,10 +250,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="413" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.768@0.0.1366.768" timestamp="1610894377701" />
-    <state x="413" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611078959403">
+    <state x="413" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611133941199">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="413" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.768@0.0.1366.768" timestamp="1611078959403" />
+    <state x="413" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.768@0.0.1366.768" timestamp="1611133941199" />
     <state x="446" y="294" key="ComposerInitDialogKey" timestamp="1608159271713">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -271,10 +278,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="499" y="91" key="NewPhpClassDialog/0.0.1366.768@0.0.1366.768" timestamp="1609194195214" />
-    <state x="368" y="55" key="SettingsEditor" timestamp="1610997650005">
+    <state x="273" y="55" width="1093" height="710" key="SettingsEditor" timestamp="1611221700158">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="368" y="55" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1610997650005" />
+    <state x="273" y="55" width="1093" height="710" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1611221700158" />
     <state x="500" y="294" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610479935904">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -291,9 +298,20 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="335" y="210" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1610870095002" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1611092512857">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1611130846576">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1611092512857" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1611130846576" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/admin/profile/detail.blade.php</url>
+          <line>77</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

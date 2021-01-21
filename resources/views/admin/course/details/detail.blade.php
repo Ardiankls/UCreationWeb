@@ -25,7 +25,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="container-xl bg-white rounded shadow mt-4 ">
                 @include('admin.course.details.creation_list')
             </div>
         </div>
