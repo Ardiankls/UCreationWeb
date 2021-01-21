@@ -14,7 +14,7 @@
             </thead>
 
             <tbody>
-                                <td>{{$creators->name}}</td>
+{{--                                <td>{{$creators->name}}</td>--}}
 
             @foreach($creations as $creation)
 {{--                @foreach($courses as $creation)--}}

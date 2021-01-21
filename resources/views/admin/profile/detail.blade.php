@@ -92,7 +92,7 @@
 
 {{--                </div>--}}
 
-                @foreach($creationss->creations as $creation)
+                @foreach($creations as $creation)
                     <div class="col-lg-3">
                         @csrf
                         <a class="" href="{{ route('admin.creation.show', $creation->id) }}">

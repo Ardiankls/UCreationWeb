@@ -36,6 +36,7 @@
                     <tr>
                         <td><select name="creator_team1" class="custom-select">
                                 @foreach ($students as $user)
+                                    <option >  </option>
                                     <option value="{{ $user->id }}" required>
                                         {{ $user->name }} </option>
                                 @endforeach
