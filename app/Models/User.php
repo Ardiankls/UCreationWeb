@@ -6,20 +6,27 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Passport\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use  HasApiTokens ,HasFactory, Notifiable;
+
+    protected  $table = 'ucr_users';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = [
+    protected $fillable =  [
         'name',
         'email',
         'password',
+        'is_login',
+        'detailabe_id',
+        'detialable_type',
+
     ];
 
     /**
@@ -40,4 +47,66 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function role() {
+        return $this->belongsTo(Role::class,'role_id', 'id');
+    }
+
+//    public function teaches(){
+//
+//        return $this->belongsToMany(Course_year::class, 'ucr_course_year_lecturers', 'ucr_user_id',
+//            'ucr_course_year_id');
+//
+//    }
+
+    public function teaches(){
+
+        return $this->belongsToMany(Course_year::class, 'ucr_course_year_lecturers', 'ucr_course_year_id',
+            'ucr_user_id');
+
+    }
+
+    public function creates(){
+
+        return $this->belongsToMany(Creation::class, 'ucr_creation_students', 'ucr_user_id',
+            'ucr_creation_student_id');
+
+    }
+
+    public function detailable() {
+        return $this->morphTo(__FUNCTION__,'detailable_type', 'detailable_id');
+    }
+
+//    public function detailable() {
+//        return $this->morphTo();
+//    }
+
+    public function isAdmin()
+    {
+        if ($this->role->name == 'Admin' && $this->is_login == 1) {
+            return true;
+        }
+        return false;
+    }
+    public function isLecturer()
+    {
+        if ($this->role->name == 'Lecturer' && $this->is_login == 1) {
+            return true;
+        }
+        return false;
+    }
+    public function isStaff()
+    {
+        if ($this->role->name == 'Staff' && $this->is_login == 1) {
+            return true;
+        }
+        return false;
+    }
+    public function isStudent()
+    {
+        if ($this->role->name == 'Student' && $this->is_login == 1) {
+            return true;
+        }
+        return false;
+    }
 }
