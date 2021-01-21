@@ -193,11 +193,15 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
-    public function update( Request $request,  course_year_lecturer $course)
+    public function update( Request $request,  Course $course)
     {
         //
         $course->update($request->all());
-        
+        $course->depart->update([
+            'id'=>$request['course_department'],
+        ]);
+
+
 //        $course = department::update([
 //            'name'=>$request['course_department'],
 //        ]);
