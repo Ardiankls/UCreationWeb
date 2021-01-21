@@ -17,16 +17,14 @@
                     <h1 class="title mx-auto text-center p-1 fs-5 font-weight-bold" style="color: white">Lecturer:</h1>
                     <div class="col-6 d-flex text-center ">
                     @foreach($lecturers as $lecturer)
-
-                        <p class="proj-shortdesc  mx-auto text-center p-2 fs-4" style="color: white"> {{$lecturer->teach->name }}</p>
-
+                        <p class="proj-shortdesc  mx-auto text-center p-2 fs-4" style="color: white">@if($loop -> iteration ==1){{$lecturer->teach->name}}@endif</p>
                     @endforeach
                     </div>
                 </div>
             </div>
 
             <div class="container-xl bg-white rounded shadow mt-4 ">
-                @include('admin.course.details.creation_list')
+                @include('lecturer.course.details.creation_list')
             </div>
         </div>
     </div>

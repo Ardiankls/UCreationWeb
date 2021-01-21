@@ -22,7 +22,8 @@
                         <td>{{ $course->id}}</td>
                         <td>{{ $course->lecturer->courses->name}}</td>
                         <td>{{ $course->lecturer->courses->depart->initial}}</td>
-                        @foreach($course->lecturer->courses->years as $yearss)<td>{{$yearss->year }}</td>@endforeach
+{{--                        @foreach($course->lecturer->courses->years as $yearss)<td>{{$yearss->year }}</td>@endforeach--}}
+                        <td>{{$course->lecturer->years->year}}</td>
                         <td>{{$course->teach->name}}</td>
 
 {{--                        <td>--}}
