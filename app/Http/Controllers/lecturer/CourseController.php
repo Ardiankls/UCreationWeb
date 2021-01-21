@@ -61,9 +61,8 @@ class CourseController extends Controller
         $pages = 'course';
 
         $course = course_year_lecturer::findOrFail($id);
-
         $creations = Creation::where('ucr_course_year_id',$id)->get();
-        $lecturers = course_year_lecturer::where('ucr_course_year_id',$id)->get();
+        $lecturers = course_year_lecturer::where('ucr_user_id',Auth::id())->get();
         return view('lecturer.course.details.detail', compact('pages', 'course', 'creations','lecturers'));
     }
 
@@ -98,5 +97,20 @@ class CourseController extends Controller
      */
     public function destroy(course_year_lecturer $course)
     {
+    }
+    public function approve($id)
+    {
+        $creation = Creation::findOrFail($id);
+        $creation->update(['status' => '1']);
+
+        return empty($creation) ? redirect()->back()->with("Fail failed to approve") : redirect()->back();
+    }
+
+    public function reject($id)
+    {
+        $creation = Creation::findOrFail($id);
+        $creation->update(['status' => '2']);
+
+        return empty($creation) ? redirect()->back()->with("Fail failed to approve") : redirect()->back()->with('Creation Rejected Successfully');
     }
 }
