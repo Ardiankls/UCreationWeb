@@ -27,10 +27,8 @@
                         <td>{{ $course->lecturer->courses->depart->initial}}</td>
                         @foreach($course->lecturer->courses->years as $yearss)<td>{{$yearss->year }}</td>@endforeach
                         <td>{{$course->teach->name}}</td>
-
                         <td>
                         </td>
-
                     </tr>
                 @endforeach
                 </tbody>

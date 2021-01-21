@@ -31,7 +31,7 @@
                 <div class="row">
                     <div class="col-sm-5" style="">
                         <picture >
-                            <img src="img/blankprofile.png" class="img-fluid rounded-3 shadow-sm">
+                            <img src="" class="img-fluid rounded-3 shadow-sm">
                         </picture>
                         {{--                    <img  class=" shadow rounded-3 "  src="img/blankprofile.png" style="width: 4em; height: 4em; margin-top: -4em; margin-right: 1em" >--}}
                     </div>
@@ -40,14 +40,14 @@
 {{--                        <p>NIM</p>--}}
 {{--                        <p>Department</p>--}}
 {{--                        <p>Batch</p>--}}
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->nip}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->name}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->email}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->gender}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->phone}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->line_account}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->department->name}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->title->name}}</p>
+                        <p>NIP     : {{\Illuminate\Support\Facades\Auth::user()->detailable->nip}}</p>
+                        <p>Name    : {{\Illuminate\Support\Facades\Auth::user()->detailable->name}}</p>
+                        <p>Email   : {{\Illuminate\Support\Facades\Auth::user()->detailable->email}}</p>
+                        <p>Gender  : {{\Illuminate\Support\Facades\Auth::user()->detailable->gender}}</p>
+                        <p>Phone   : {{\Illuminate\Support\Facades\Auth::user()->detailable->phone}}</p>
+                        <p>Line    : {{\Illuminate\Support\Facades\Auth::user()->detailable->line_account}}</p>
+                        <p>Department : {{\Illuminate\Support\Facades\Auth::user()->detailable->department->name}}</p>
+                        <p>Title   : {{\Illuminate\Support\Facades\Auth::user()->detailable->title->name}}</p>
 
 
                     </div>

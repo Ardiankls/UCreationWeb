@@ -4,6 +4,7 @@ namespace App\Http\Controllers\lecturer;
 
 use App\Http\Controllers\Controller;
 use App\Models\Creation;
+use App\Models\Creation_user;
 use Illuminate\Http\Request;
 
 class CreationController extends Controller
@@ -52,7 +53,13 @@ class CreationController extends Controller
      */
     public function show($id)
     {
-        //
+        //buat nge show detail Project
+        $pages = 'creation';
+
+
+        $creation = Creation::findOrFail($id);
+        $creators = Creation_user::where('ucr_creation_id',$id)->get();
+        return view('lecturer.creation.detail', compact('pages', 'creation', 'creators'));
     }
 
     /**
