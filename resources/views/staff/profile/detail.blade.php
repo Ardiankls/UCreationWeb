@@ -31,14 +31,7 @@
                         {{--                        <p>NIM</p>--}}
                         {{--                        <p>Department</p>--}}
                         {{--                        <p>Batch</p>--}}
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->nip}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->name}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->email}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->gender}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->phone}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->line_account}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->department->name}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->title->name}}</p>
+                        
 
 
                     </div>
