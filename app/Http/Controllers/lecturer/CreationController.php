@@ -95,4 +95,19 @@ class CreationController extends Controller
     {
         //
     }
+    public function approve($id)
+    {
+        $creation = Creation::findOrFail($id);
+        $creation->update(['status' => '1']);
+
+        return empty($creation) ? redirect()->back()->with("Fail failed to approve") : redirect()->back();
+    }
+
+    public function reject($id)
+    {
+        $creation = Creation::findOrFail($id);
+        $creation->update(['status' => '2']);
+
+        return empty($creation) ? redirect()->back()->with("Fail failed to approve") : redirect()->back()->with('Creation Rejected Successfully');
+    }
 }

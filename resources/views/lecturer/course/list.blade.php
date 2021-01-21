@@ -15,6 +15,7 @@
                     <th scope="col">Department</th>
                     <th scope="col">Year</th>
                     <th scope="col">Lecturer</th>
+                    <th scope="col">Action</th>
                     <th></th>
                 </tr>
                 </thead>
@@ -27,6 +28,16 @@
                         <td>{{ $course->lecturer->courses->depart->initial}}</td>
                         @foreach($course->lecturer->courses->years as $yearss)<td>{{$yearss->year }}</td>@endforeach
                         <td>{{$course->teach->name}}</td>
+                        @auth
+                            <td class="d-flex">
+
+                                <form action="{{ route('lecturer.course.show', $course) }}">
+                                    @csrf
+                                    <button type="submit" class="btn btn-primary">Detail</button>
+                                </form>
+
+                            </td>
+                        @endauth
                         <td>
                         </td>
                     </tr>

@@ -6,10 +6,12 @@ use App\Http\Controllers\Controller;
 use App\Models\Course;
 use App\Models\Course_year;
 use App\Models\course_year_lecturer;
+use App\Models\Creation;
 use App\Models\department;
 use App\Models\User;
 use App\Models\year;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CourseController extends Controller
 {
@@ -20,7 +22,10 @@ class CourseController extends Controller
      */
     public function index()
     {
-        $courses = course_year_lecturer::all();
+        $courses = Course_year::whereHas('lecturer', function(\Illuminate\Database\Eloquent\Builder $query){
+            $query->where('ucr_user_id', Auth::id());
+        })->get();
+        dd($courses);
         $pages = 'course';
         return view('lecturer.course.list', compact('courses', 'pages'));
     }
@@ -55,6 +60,13 @@ class CourseController extends Controller
     public function show($id)
     {
         //
+        $pages = 'course';
+
+        $course = course_year_lecturer::findOrFail($id);
+
+        $creations = Creation::where('ucr_course_year_id',$id)->get();
+        $lecturers = course_year_lecturer::where('ucr_course_year_id',$id)->get();
+        return view('lecturer.course.details.detail', compact('pages', 'course', 'creations','lecturers'));
     }
 
     /**

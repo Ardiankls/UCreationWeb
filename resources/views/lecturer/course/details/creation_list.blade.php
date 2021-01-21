@@ -12,20 +12,14 @@
                 <th scope="col">Action</th>
             </tr>
             </thead>
-
             <tbody>
-{{--                                <td>{{$creators->name}}</td>--}}
-
             @foreach($creations as $creation)
-{{--                @foreach($courses as $creation)--}}
                 <tr>
-
                     <td>{{ $creation->id}}</td>
                     <td>{{ $creation->name }}</td>
                     <td> @foreach($creation->creations as $creator)
                        {{$creator->name}}
                     @endforeach</td>
-{{--                    <td>{{ $creation->created_by }}</td>--}}
                     <td>@if($creation->status == 0) <p class="text-warning">Pending</p>
                         @elseif($creation->status == 1) <p class="text-success">Approved</p>
                         @else <p class="text-danger">Rejected</p> @endif </td>
@@ -33,7 +27,7 @@
                         <div class="row no-gutters">
                             @if($creation->status == 0)
                                 <div class="col-md-6">
-                                    <form action="{{route('admin.creations.approve', $creation->id)}}"
+                                    <form action="{{route('lecturer.creations.approve', $creation->id)}}"
                                           method="POST">
                                         {{ csrf_field() }}
                                         <input name="event_id" type="hidden" value="{{$creation->id}}">
@@ -41,7 +35,7 @@
                                     </form>
                                 </div>
                                 <div class="col-md-6">
-                                    <form action="{{route('admin.creations.reject', $creation->id)}}"
+                                    <form action="{{route('lecturer.creations.reject', $creation->id)}}"
                                           method="POST">
                                         {{ csrf_field() }}
                                         <input name="event_id" type="hidden" value="{{$creation->id}}">
