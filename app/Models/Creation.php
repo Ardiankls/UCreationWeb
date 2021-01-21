@@ -30,7 +30,7 @@ class Creation extends Model
 //        return $this->belongsToMany(Creation::class, 'ucr_creation_students', 'ucr_creation_id','student_id');
 //    }
     public function creations(){
-        return $this->belongsToMany(User::class, 'ucr_creation_users', 'ucr_creation_id','user_id');
+        return $this->belongsToMany(User::class, 'ucr_creation_users', 'ucr_creation_id','ucr_user_id');
     }
 //    public function creators(){
 //        return $this->belongsTo(User::class, 'creator_team', 'id');

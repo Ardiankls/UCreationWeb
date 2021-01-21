@@ -10,6 +10,7 @@ use App\Models\User;
 use App\Models\Staff;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use PhpParser\Builder;
 
 class UserController extends Controller
 {
@@ -22,12 +23,16 @@ class UserController extends Controller
     {
         //
 //        $user = User::find(Auth::id());
-        $usercreations = Creation_user::where('ucr_user_id', Auth::id())->pluck('ucr_creation_id');
+//        $usercreations = Creation_user::where('ucr_user_id', Auth::id())->get();
 //        $creationsof = Creation_user::where('id', $usercreations)->get();
-        $creations = Creation::where('id', $usercreations)->get();
+        $creations = Creation::whereHas('creations', function(\Illuminate\Database\Eloquent\Builder $query){
+            $query->where('ucr_user_id', Auth::id());
+        })->get()
+        ;
 //        foreach ( $creations as $creation) {
 //            $creation;
 //        }
+//        dd($creation);
 
 
 

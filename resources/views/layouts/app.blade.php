@@ -17,23 +17,25 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <!-- Styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+          integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+          crossorigin="anonymous"/>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
+<body style="overflow-x: hidden">
 <div id="app">
     <nav class="navbar shadow col-11 navbar-expand-lg navbar-light bg-light rounded-3"
          style="margin-left: 1em; margin-top: 0.5em;  ">
         <div class="container">
             <a class="navbar-brand" href="
             @auth()
-                        @if(Auth()->user()->isAdmin()){{ route('admin.creation.index') }}@endif
-                        @if(Auth()->user()->isLecturer()){{ route('lecturer.creation.index') }}@endif
-                        @if(Auth()->user()->isStaff()){{ route('staff.creation.index') }}@endif
-                        @if(Auth()->user()->isStudent()){{ route('student.creation.index') }}@endif
+            @if(Auth()->user()->isAdmin()){{ route('admin.creation.index') }}@endif
+            @if(Auth()->user()->isLecturer()){{ route('lecturer.creation.index') }}@endif
+            @if(Auth()->user()->isStaff()){{ route('staff.creation.index') }}@endif
+            @if(Auth()->user()->isStudent()){{ route('student.creation.index') }}@endif
 
             @endauth
                 ">
@@ -74,14 +76,18 @@
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
-                                    @if(Auth()->user()->isAdmin())<a class="dropdown-item" href="{{ route('admin.user.index',\Illuminate\Support\Facades\Auth::id()) }}"@endif
-                                    @if(Auth()->user()->isLecturer())<a class="dropdown-item" href="{{ route('lecturer.user.index',\Illuminate\Support\Facades\Auth::id()) }}"@endif
-                                    @if(Auth()->user()->isStaff())<a class="dropdown-item" href="{{ route('staff.user.index',\Illuminate\Support\Facades\Auth::id()) }}"@endif
-                                    @if(Auth()->user()->isStudent())<a class="dropdown-item" href="{{ route('student.user.index',\Illuminate\Support\Facades\Auth::id()) }}"@endif
-                                   onclick="event.preventDefault();
-                                                             ">
+                                @if(Auth()->user()->isAdmin())<a class="dropdown-item"
+                                                                 href="{{ route('admin.user.index',\Illuminate\Support\Facades\Auth::id()) }}"@endif
+                                @if(Auth()->user()->isLecturer())<a class="dropdown-item"
+                                                                    href="{{ route('lecturer.user.index',\Illuminate\Support\Facades\Auth::id()) }}"@endif
+                                @if(Auth()->user()->isStaff())<a class="dropdown-item"
+                                                                 href="{{ route('staff.user.index',\Illuminate\Support\Facades\Auth::id()) }}"@endif
+                                @if(Auth()->user()->isStudent())<a class="dropdown-item"
+                                                                   href="{{ route('student.user.index',\Illuminate\Support\Facades\Auth::id()) }}"
+                                                                   @endif
+                                                                   >
                                     {{ __('Profile') }}
-                                    </a>
+                                </a>
 
 
                                 <a class="dropdown-item" href="{{ route('logout') }}"
@@ -100,13 +106,15 @@
             </div>
         </div>
     </nav>
-    <div class="container d-block position-absolute" style=" z-index: -1000" >
-        <img  class="img-fluid " src="{{ asset('img/circlelavender3.png') }}">
-        <img  class="img-fluid  "  src="{{ asset('img/circlepink.png') }}">
+    <div class="container d-block position-absolute" style=" z-index: -1000">
+        <img class="img-fluid " src="{{ asset('img/circlelavender3.png') }}">
+
     </div>
-
+    <div class="container d-block position-absolute "
+         style=" z-index: -1001; left: 1200px; bottom: 500px; max-width: 100%;">
+        <img class="img-fluid  " src="{{ asset('img/circlepink.png') }}">
+    </div>
     <main class="py-4" style="z-index: 100">
-
 
 
         @yield('content')
