@@ -22,10 +22,8 @@ class CourseController extends Controller
      */
     public function index()
     {
-        $courses = Course_year::whereHas('lecturer', function(\Illuminate\Database\Eloquent\Builder $query){
-            $query->where('ucr_user_id', Auth::id());
-        })->get();
-        dd($courses);
+        $courses = course_year_lecturer::where('ucr_user_id', Auth::id())->get();
+//        dd($courses);
         $pages = 'course';
         return view('lecturer.course.list', compact('courses', 'pages'));
     }
@@ -77,12 +75,7 @@ class CourseController extends Controller
      */
     public function edit(Course $course)
     {
-        $pages = 'course';
-        $departments = department::all();
-        $periods = year::all();
-        $lecturers = User::where('role_id', '=', 2)
-            ->get();
-        return view('lecturer.course.update', compact('course', 'pages', 'departments', 'periods', 'lecturers'));
+
     }
 
     /**
@@ -94,9 +87,7 @@ class CourseController extends Controller
      */
     public function update(Request $request, Course $course)
     {
-        $course->update($request->all());
 
-        return redirect()->route('lecturer.course.index');
     }
 
     /**
@@ -107,7 +98,5 @@ class CourseController extends Controller
      */
     public function destroy(course_year_lecturer $course)
     {
-        $course->delete();
-        return redirect()->back();
     }
 }
