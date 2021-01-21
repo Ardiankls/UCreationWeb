@@ -17,8 +17,11 @@ class UserController extends Controller
     public function index()
     {
         //
-        $users = User::find(Auth::id());
-      return view('lecturer.profile.detail', compact('users'));
+//        $users = User::find(Auth::id());
+//        $users = User::all();
+
+        ;
+      return view('lecturer.profile.detail');
 
     }
 
