@@ -19,9 +19,6 @@
         <a class="nav-link " style="color: white;" href="{{ route('admin.creation.create') }}">Upload Project</a>
     </li>
     <li class="nav-item btn  " style="background-color: #7965FF; margin-right: 1em ">
-        <a class="nav-link " style="color: white;" href="{{ route('admin.course.create') }}">Add Course</a>
-    </li>
-    <li class="nav-item btn  " style="background-color: #7965FF; margin-right: 1em ">
         <a class="nav-link " style="color: white;" href="{{ route('admin.course.index') }}">Course List</a>
     </li>
     <li class="nav-item btn   " style="background-color: #7965FF; margin-right: 1em ">
