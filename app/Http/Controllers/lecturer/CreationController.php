@@ -4,12 +4,12 @@ namespace App\Http\Controllers\lecturer;
 
 use App\Http\Controllers\Controller;
 use App\Models\Creation;
-<<<<<<< HEAD
+
 use App\Models\User;
-||||||| 146f528
-=======
+
+
 use App\Models\Creation_user;
->>>>>>> lecturer
+
 use Illuminate\Http\Request;
 
 class CreationController extends Controller
@@ -58,15 +58,13 @@ class CreationController extends Controller
      */
     public function show(Creation $creation)
     {
-<<<<<<< HEAD
+
         $pages = 'creation';
         $students = User::where('role_id', '=', 1)
             ->get();
 //        $user = User::all();
         return view('lecturer.creation.detail', compact('pages', 'creation', 'students'));
-||||||| 146f528
-        //
-=======
+
         //buat nge show detail Project
         $pages = 'creation';
 
@@ -74,7 +72,7 @@ class CreationController extends Controller
         $creation = Creation::findOrFail($id);
         $creators = Creation_user::where('ucr_creation_id',$id)->get();
         return view('lecturer.creation.detail', compact('pages', 'creation', 'creators'));
->>>>>>> lecturer
+
     }
 
     /**
