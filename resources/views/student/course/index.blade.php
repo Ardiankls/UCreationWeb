@@ -12,6 +12,7 @@
                     <th scope="col">Course Name</th>
                     <th scope="col">Department</th>
                     <th scope="col">Year</th>
+                    <th scope="col">Lecturer</th>
 {{--                    <th></th>--}}
                 </tr>
                 </thead>
@@ -19,9 +20,10 @@
                 @foreach($courses as $course)
                     <tr>
                         <td>{{ $course->id}}</td>
-                        <td>{{ $course->courses->name }}</td>
-                        <td>{{ $course->courses->depart->initial}}</td>
-                        <td>{{ $course->years->year }}</td>
+                        <td>{{ $course->lecturer->courses->name}}</td>
+                        <td>{{ $course->lecturer->courses->depart->initial}}</td>
+                        @foreach($course->lecturer->courses->years as $yearss)<td>{{$yearss->year }}</td>@endforeach
+                        <td>{{$course->teach->name}}</td>
 
 {{--                        <td>--}}
 

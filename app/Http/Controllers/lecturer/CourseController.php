@@ -20,7 +20,7 @@ class CourseController extends Controller
      */
     public function index()
     {
-        $courses = Course_year::all();
+        $courses = course_year_lecturer::all();
         $pages = 'course';
         return view('lecturer.course.list', compact('courses', 'pages'));
     }
