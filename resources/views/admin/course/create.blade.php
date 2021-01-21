@@ -4,7 +4,7 @@
     <form action="{{ route('admin.course.store') }}" method="post">
         @csrf
         <div class="container" style="padding: 20px 55px;">
-            <h1>Creation Information</h1>
+            <h1>Course Information</h1>
             <div class="form-group"><label>Course Name</label>
                 <input class="form-control" type="text" name="name_course" required></div>
             <div class="form-group"><label>Department</label>

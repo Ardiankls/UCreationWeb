@@ -4,8 +4,6 @@
         <div class="row">
             <h1 class="col">Courses List</h1>
         </div>
-        <div class="row">
-        </div>
         <div class="row" style="margin-top: 30px;">
             <table class="table table-striped">
                 <thead>
@@ -15,7 +13,7 @@
                     <th scope="col">Department</th>
                     <th scope="col">Year</th>
                     <th scope="col">lecturers</th>
-                    <th scope="col"></th>
+                    <th scope="col">action</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -28,11 +26,9 @@
                         <td></td>
                         <td>{{ $course->lecturer->years->year }}</td>
                         <td>{{ $course->teach->name }}</td>
-
-
-
+                            <td >
+                            </td>
                         <td>
-
                         </td>
 
                     </tr>

@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\student;
 
 use App\Http\Controllers\Controller;
+use App\Models\Course_year;
 use App\Models\Creation;
 use App\Models\Creation_user;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -31,8 +33,11 @@ class CreationController extends Controller
      */
     public function create()
     {
-        $pages = 'student';
-        return view('student.creation.create', compact('pages'));
+        $pages = 'creation';
+        $courses = Course_year::all();
+        $students = User::where('role_id', '=', 1)
+            ->get();
+        return view('student.creation.create', compact('courses', 'students', 'pages'));
     }
 
     /**
@@ -58,6 +63,8 @@ class CreationController extends Controller
             'short_description' => $request['short_desc'],
             'long_description' => $request['long_desc'],
             'picture' => $imgName,
+//            'created_by' => Auth::id(),
+//            'creator_team' => $request['creator_team'],
             'ucr_course_year_id' => $request['course_name'],
         ]);
 
@@ -73,7 +80,7 @@ class CreationController extends Controller
 
         }
 
-
+        return redirect()->route('student.creation.list');
     }
 
     /**

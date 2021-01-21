@@ -67,7 +67,9 @@
         <li class="nav-item btn  " style="background-color: #7965FF; margin-right: 1em ">
             <a class="nav-link " style="color: white;" href="{{ route('student.creation.create') }}">Upload Project</a>
         </li>
-
+        <li class="nav-item btn  " style="background-color: #7965FF; margin-right: 1em ">
+            <a class="nav-link " style="color: white;" href="{{ route('student.course.index') }}">Course List</a>
+        </li>
         <li class="nav-item btn   " style="background-color: #7965FF; margin-right: 1em ">
             <a class="nav-link"  style="color: white;" href="#">About</a>
         </li>
