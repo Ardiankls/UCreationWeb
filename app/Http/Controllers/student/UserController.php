@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\student;
 
 use App\Http\Controllers\Controller;
+use App\Models\Creation;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -14,7 +17,11 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $creations = Creation::whereHas('creations', function(\Illuminate\Database\Eloquent\Builder $query){
+            $query->where('ucr_user_id', Auth::id());
+        })->get()
+        ;
+        return view('student.profile.detail', compact('creations'));
     }
 
     /**

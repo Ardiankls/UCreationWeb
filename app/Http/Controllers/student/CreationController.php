@@ -95,11 +95,11 @@ class CreationController extends Controller
         $pages = 'creation';
 
 
-        $creation = Creation::findOrFail($id);
+        $creations = Creation::findOrFail($id);
         $creators = Creation_user::where('ucr_creation_id',$id)->get();
 
 
-        return view('student.creation.detail', compact('pages', 'creation', 'creators'));
+        return view('student.creation.detail', compact('pages', 'creations', 'creators'));
     }
 
     /**
