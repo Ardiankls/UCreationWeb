@@ -3,7 +3,13 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Creation;
+use App\Models\Creation_user;
+use App\Models\department;
+use App\Models\User;
+use App\Models\Staff;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -15,6 +21,19 @@ class UserController extends Controller
     public function index()
     {
         //
+//        $user = User::find(Auth::id());
+        $usercreations = Creation_user::where('ucr_user_id', Auth::id())->pluck('ucr_creation_id');
+//        $creationsof = Creation_user::where('id', $usercreations)->get();
+        $creations = Creation::where('id', $usercreations)->get();
+//        foreach ( $creations as $creation) {
+//            $creation;
+//        }
+
+
+
+        return view('admin.profile.detail', compact('creations'));
+
+
     }
 
     /**
@@ -47,6 +66,7 @@ class UserController extends Controller
     public function show($id)
     {
         //
+
     }
 
     /**

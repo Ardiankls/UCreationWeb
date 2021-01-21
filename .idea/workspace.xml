@@ -177,7 +177,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/staff/creation" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="discord-application" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -243,6 +243,12 @@
       <workItem from="1610286174775" duration="9497000" />
       <workItem from="1610327717254" duration="10657000" />
       <workItem from="1610386965248" duration="41763000" />
+      <workItem from="1610736259875" duration="13797000" />
+      <workItem from="1610773126525" duration="54500000" />
+      <workItem from="1610995508157" duration="341000" />
+      <workItem from="1610995905111" duration="1490000" />
+      <workItem from="1610997587550" duration="62000" />
+      <workItem from="1610997694602" duration="39698000" />
     </task>
     <servers />
   </component>
@@ -262,19 +268,35 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="137" y="49" key="#Plugins" timestamp="1610995852128">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="137" y="49" key="#Plugins/0.0.1366.768@0.0.1366.768" timestamp="1610995852128" />
     <state x="423" y="174" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610188769348">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="423" y="174" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1610188769348" />
-    <state x="413" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607654265454">
+    <state x="363" y="120" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1611076869489">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state x="363" y="120" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.768@0.0.1366.768" timestamp="1611076869489" />
+    <state x="413" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610894377701">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+<<<<<<< HEAD
     <state x="413" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.768@0.0.1366.768" timestamp="1607654265454" />
     <state x="580" y="188" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610550246616">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="580" y="188" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1360.20.1360.728/0.0.1920.1040@0.0.1920.1040" timestamp="1610550246616" />
     <state x="413" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.768@0.0.1366.768" timestamp="1610476399577" />
+=======
+    <state x="413" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.768@0.0.1366.768" timestamp="1610894377701" />
+    <state x="413" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611078959403">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="413" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.768@0.0.1366.768" timestamp="1611078959403" />
+>>>>>>> develope
     <state x="446" y="294" key="ComposerInitDialogKey" timestamp="1608159271713">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -299,29 +321,29 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="499" y="91" key="NewPhpClassDialog/0.0.1366.768@0.0.1366.768" timestamp="1609194195214" />
-    <state x="184" y="29" key="SettingsEditor" timestamp="1609563930146">
+    <state x="368" y="55" key="SettingsEditor" timestamp="1610997650005">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="184" y="29" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1609563930146" />
+    <state x="368" y="55" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1610997650005" />
     <state x="500" y="294" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610479935904">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="500" y="294" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.768@0.0.1366.768" timestamp="1610479935904" />
-    <state x="0" y="144" width="583" height="624" key="find.popup" timestamp="1610476696253">
+    <state x="0" y="144" width="583" height="624" key="find.popup" timestamp="1611067587590">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="0" y="144" width="583" height="624" key="find.popup/0.0.1366.768@0.0.1366.768" timestamp="1610476696253" />
+    <state x="0" y="144" width="583" height="624" key="find.popup/0.0.1366.768@0.0.1366.768" timestamp="1611067587590" />
     <state x="324" y="109" width="700" height="530" key="recent.locations.popup" timestamp="1607648364920">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="324" y="109" width="700" height="530" key="recent.locations.popup/0.0.1366.768@0.0.1366.768" timestamp="1607648364920" />
-    <state x="335" y="210" key="run.anything.popup" timestamp="1609258049066">
+    <state x="335" y="210" key="run.anything.popup" timestamp="1610870095002">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="335" y="210" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1609258049066" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1610336036155">
+    <state x="335" y="210" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1610870095002" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1611092512857">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1610336036155" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1611092512857" />
   </component>
 </project>

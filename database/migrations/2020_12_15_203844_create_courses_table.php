@@ -16,6 +16,7 @@ class CreateCoursesTable extends Migration
         Schema::create('ucr_courses', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->foreignId('department_id')->constrained()->onDelete('cascade');;
             $table->timestamps();
         });
     }

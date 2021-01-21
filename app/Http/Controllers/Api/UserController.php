@@ -3,23 +3,25 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\Api\CreationResource;
-use App\Models\Creation;
+use App\Http\Resources\Api\UserResource;
+use App\Models\User;
 use Illuminate\Http\Request;
-use function GuzzleHttp\Promise\all;
+use Illuminate\Support\Facades\Auth;
 
-class CreationController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
         //
-        $creations = creation::where('status', '1')->get();
-        return CreationResource::collection($creations);
+        $users = User::where('id', Auth::id())->get();
+//        $profile = $users->detailable;
+
+        return UserResource::collection($users);
 
     }
 

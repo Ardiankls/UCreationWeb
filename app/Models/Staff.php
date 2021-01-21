@@ -23,17 +23,20 @@ class Staff extends Model
         'title_id'
     ];
 
+
+
+
     public function staff(){
         return $this->belongsTo(Title::class, 'title', 'id');
     }
-    public function users(){
-        return $this->morphOne('App\Models\User', 'detailable');
+    public function user(){
+        return $this->morphMany('App\Models\User', 'detailable');
     }
     public function department(){
-        return $this->belongsTo(Department::class, 'department', 'id');
+        return $this->belongsTo(Department::class, 'department_id', 'id');
     }
     public function title(){
-        return $this->belongsTo(Title::class, 'title', 'id');
+        return $this->belongsTo(Title::class, 'title_id', 'id');
     }
 
 

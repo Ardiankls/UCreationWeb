@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
         $user->email = 'ardian@admin.com';
         $user->password = Hash::make('passwordadmin1');
         $user->role_id = 4;
-        $user->detailable_id= 3;
+        $user->detailable_id= 1;
         $user->detailable_type= 'App\Models\Staff';
         $user->save();
 
@@ -29,7 +29,7 @@ class UserSeeder extends Seeder
         $user->email = 'kevin@admin.com';
         $user->password = Hash::make('passwordadmin2');
         $user->role_id = 4;
-        $user->detailable_id= 3;
+        $user->detailable_id= 2;
         $user->detailable_type= 'App\Models\Staff';
         $user->save();
 
@@ -47,7 +47,7 @@ class UserSeeder extends Seeder
         $user->email = 'fadhel@staff.com';
         $user->password = Hash::make('passwordstaff1');
         $user->role_id = 3;
-        $user->detailable_id= 3;
+        $user->detailable_id= 4;
         $user->detailable_type= 'App\Models\Staff';
         $user->save();
 
@@ -56,7 +56,7 @@ class UserSeeder extends Seeder
         $user->email = 'ardian@lecturer.com';
         $user->password = Hash::make('passworlecturer2');
         $user->role_id = 2;
-        $user->detailable_id= 2;
+        $user->detailable_id= 1;
         $user->detailable_type= 'App\Models\Lecturer';
         $user->save();
 
@@ -76,7 +76,7 @@ class UserSeeder extends Seeder
         $user->email = 'fadhel@lecturer.com';
         $user->password = Hash::make('passwordlecturer2');
         $user->role_id = 2;
-        $user->detailable_id= 2;
+        $user->detailable_id= 3;
         $user->detailable_type= 'App\Models\Lecturer';
         $user->save();
 
@@ -85,7 +85,7 @@ class UserSeeder extends Seeder
         $user->email = 'budi@lecturer.com';
         $user->password = Hash::make('passwordlecturer3');
         $user->role_id = 2;
-        $user->detailable_id= 2;
+        $user->detailable_id= 4;
         $user->detailable_type= 'App\Models\Lecturer';
         $user->save();
 

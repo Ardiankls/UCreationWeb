@@ -36,10 +36,20 @@
                         {{--                    <img  class=" shadow rounded-3 "  src="img/blankprofile.png" style="width: 4em; height: 4em; margin-top: -4em; margin-right: 1em" >--}}
                     </div>
                     <div class="col-sm-7" style="color: #979BFF">
-                        <p>Name</p>
-                        <p>NIM</p>
-                        <p>Department</p>
-                        <p>Batch</p>
+{{--                        <p>Name</p>--}}
+{{--                        <p>NIM</p>--}}
+{{--                        <p>Department</p>--}}
+{{--                        <p>Batch</p>--}}
+                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->nip}}</p>
+                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->name}}</p>
+                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->email}}</p>
+                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->gender}}</p>
+                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->phone}}</p>
+                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->line_account}}</p>
+                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->department->name}}</p>
+                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->title->name}}</p>
+
+
                     </div>
                 </div>
             </div>
@@ -48,39 +58,55 @@
         <div class="container " >
             <div class="row ">
 
-                <div class="row">
-                    <div class="card-view bg-white shadow rounded-3 mx-auto" style="width: 200px; height: 267px; margin-top: 50px;">
-                        <div class="image-cover rounded-3 mx-auto mt-3 " style="padding: 2px; background-color: lightpink; width: auto; height: 120px;"></div>
-                        <h1 class="title mx-auto text-center p-2 fs-4" style="color: #979BFF">Project Title</h1>
-                        <p class="proj-shortdesc mx-auto p-2 fs-6" style="color: #979BFF"> Short descripion about the project</p>
-                        {{--    <img class="rounded-3" src="img/noimage.jpg">--}}
-                    </div>
-                    <div class="card-view bg-white shadow rounded-3 mx-auto" style="width: 200px; height: 267px; margin-top: 50px;">
-                        <div class="image-cover rounded-3 mx-auto mt-3" style="padding: 2px; background-color: lightpink; width: auto; height: 120px;"></div>
-                        <h1 class="title mx-auto text-center p-2 fs-4" style="color: #979BFF">Project Title</h1>
-                        <p class="proj-shortdesc mx-auto p-2 fs-6" style="color: #979BFF"> Short descripion about the project</p>
-                        {{--    <img class="rounded-3" src="img/noimage.jpg">--}}
-                    </div>
-                    <div class="card-view bg-white shadow rounded-3 mx-auto" style="width: 200px; height: 267px; margin-top: 50px;">
-                        <div class="image-cover rounded-3 mx-auto mt-3" style="padding: 2px; background-color: lightpink; width: auto; height: 120px;"></div>
-                        <h1 class="title mx-auto text-center p-2 fs-4" style="color: #979BFF">Project Title</h1>
-                        <p class="proj-shortdesc mx-auto p-2 fs-6" style="color: #979BFF"> Short descripion about the project</p>
-                        {{--    <img class="rounded-3" src="img/noimage.jpg">--}}
-                    </div>
-                    <div class="card-view bg-white shadow rounded-3 mx-auto" style="width: 200px; height: 267px; margin-top: 50px;">
-                        <div class="image-cover rounded-3 mx-auto mt-3" style="padding: 2px; background-color: lightpink; width: auto; height: 120px;"></div>
-                        <h1 class="title mx-auto text-center p-2 fs-4" style="color: #979BFF">Project Title</h1>
-                        <p class="proj-shortdesc mx-auto p-2 fs-6" style="color: #979BFF"> Short descripion about the project</p>
-                        {{--    <img class="rounded-3" src="img/noimage.jpg">--}}
-                    </div>
-                    <div class="card-view bg-white shadow rounded-3 mx-auto" style="width: 200px; height: 267px; margin-top: 50px;">
-                        <div class="image-cover rounded-3 mx-auto mt-3" style="padding: 2px; background-color: lightpink; width: auto; height: 120px;"></div>
-                        <h1 class="title mx-auto text-center p-2 fs-4" style="color: #979BFF">Project Title</h1>
-                        <p class="proj-shortdesc mx-auto p-2 fs-6" style="color: #979BFF"> Short descripion about the project</p>
-                        {{--    <img class="rounded-3" src="img/noimage.jpg">--}}
-                    </div>
+{{--                <div class="row">--}}
+{{--                    <div class="card-view bg-white shadow rounded-3 mx-auto" style="width: 200px; height: 267px; margin-top: 50px;">--}}
+{{--                        <div class="image-cover rounded-3 mx-auto mt-3 " style="padding: 2px; background-color: lightpink; width: auto; height: 120px;"></div>--}}
+{{--                        <h1 class="title mx-auto text-center p-2 fs-4" style="color: #979BFF">Project Title</h1>--}}
+{{--                        <p class="proj-shortdesc mx-auto p-2 fs-6" style="color: #979BFF"> Short descripion about the project</p>--}}
+{{--                        --}}{{--    <img class="rounded-3" src="img/noimage.jpg">--}}
+{{--                    </div>--}}
+{{--                    <div class="card-view bg-white shadow rounded-3 mx-auto" style="width: 200px; height: 267px; margin-top: 50px;">--}}
+{{--                        <div class="image-cover rounded-3 mx-auto mt-3" style="padding: 2px; background-color: lightpink; width: auto; height: 120px;"></div>--}}
+{{--                        <h1 class="title mx-auto text-center p-2 fs-4" style="color: #979BFF">Project Title</h1>--}}
+{{--                        <p class="proj-shortdesc mx-auto p-2 fs-6" style="color: #979BFF"> Short descripion about the project</p>--}}
+{{--                        --}}{{--    <img class="rounded-3" src="img/noimage.jpg">--}}
+{{--                    </div>--}}
+{{--                    <div class="card-view bg-white shadow rounded-3 mx-auto" style="width: 200px; height: 267px; margin-top: 50px;">--}}
+{{--                        <div class="image-cover rounded-3 mx-auto mt-3" style="padding: 2px; background-color: lightpink; width: auto; height: 120px;"></div>--}}
+{{--                        <h1 class="title mx-auto text-center p-2 fs-4" style="color: #979BFF">Project Title</h1>--}}
+{{--                        <p class="proj-shortdesc mx-auto p-2 fs-6" style="color: #979BFF"> Short descripion about the project</p>--}}
+{{--                        --}}{{--    <img class="rounded-3" src="img/noimage.jpg">--}}
+{{--                    </div>--}}
+{{--                    <div class="card-view bg-white shadow rounded-3 mx-auto" style="width: 200px; height: 267px; margin-top: 50px;">--}}
+{{--                        <div class="image-cover rounded-3 mx-auto mt-3" style="padding: 2px; background-color: lightpink; width: auto; height: 120px;"></div>--}}
+{{--                        <h1 class="title mx-auto text-center p-2 fs-4" style="color: #979BFF">Project Title</h1>--}}
+{{--                        <p class="proj-shortdesc mx-auto p-2 fs-6" style="color: #979BFF"> Short descripion about the project</p>--}}
+{{--                        --}}{{--    <img class="rounded-3" src="img/noimage.jpg">--}}
+{{--                    </div>--}}
+{{--                    <div class="card-view bg-white shadow rounded-3 mx-auto" style="width: 200px; height: 267px; margin-top: 50px;">--}}
+{{--                        <div class="image-cover rounded-3 mx-auto mt-3" style="padding: 2px; background-color: lightpink; width: auto; height: 120px;"></div>--}}
+{{--                        <h1 class="title mx-auto text-center p-2 fs-4" style="color: #979BFF">Project Title</h1>--}}
+{{--                        <p class="proj-shortdesc mx-auto p-2 fs-6" style="color: #979BFF"> Short descripion about the project</p>--}}
+{{--                        --}}{{--    <img class="rounded-3" src="img/noimage.jpg">--}}
+{{--                    </div>--}}
 
-                </div>
+{{--                </div>--}}
+
+                @foreach($creations as $creation)
+                    <div class="col-lg-3">
+                        @csrf
+                        <a class="" href="{{ route('admin.creation.show', $creation->id) }}">
+                            <div class="card-view bg-white shadow "  style="width: 200px; height: 267px; margin-top: 50px; border-radius: 15px;">
+                                <img src="/image/creation/{{$creation->picture}}" class="card-img-top" style="padding: 2px ;margin: 0 auto; height: 155px; margin-top: 10px; border-radius: 15px;">
+                                <h1 class="title mx-auto text-center p-1 fs-5 font-weight-bold" style="color: #979BFF">{{$creation->name}}</h1>
+{{--                                <p class="proj-shortdesc mx-auto text-center     p-2 fs-6" style="color: #979BFF"> {{$creation->status}}</p>--}}
+                                @if($creation->status == 0) <p class="proj-shortdesc mx-auto text-center p-2 fs-6 text-warning">Pending</p>
+                                @elseif($creation->status == 1) <p class="proj-shortdesc mx-auto text-center p-2 fs-6 text-success">Approved</p>
+                                @else <p class="proj-shortdesc mx-auto text-center p-2 fs-6 text-danger">Rejected</p> @endif
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
                 <nav aria-label="Page navigation example" style="color: #979BFF">
                     <ul class="pagination justify-content-center mt-3" >
                         <li class="page-item disabled">

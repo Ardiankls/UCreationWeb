@@ -95,6 +95,8 @@ Route::group([ 'middleware' => ['admin'], 'prefix' => 'admin', 'as' => 'admin.']
     Route::resource('staff', AdminStaffController::class);
     Route::resource('student', AdminStudentController::class);
     Route::resource('user', AdminUserController::class);
+    Route::post('creations/{id}/approved',[AdminCreationController::class,'approve'])->name('creations.approve');
+    Route::post('creations/{id}/reject',[AdminCreationController::class,'reject'])->name('creations.reject');
 });
 
 //route group untuk lecturer
