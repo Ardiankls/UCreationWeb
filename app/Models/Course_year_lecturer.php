@@ -26,7 +26,6 @@ class course_year_lecturer extends Pivot
     }
 
 
-
 //    public function teaches(){
 //        return $this->belongsToMany(Course_year::class)
 //        return $this->belongsToMany(Course_year::class)->withPivot('ucr_course_year_id')->withTimestamps();

@@ -20,20 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f926e0b-4d8a-421e-a421-57a36b887e24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/student/course/list.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/student/course/update.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/lecturer/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/lecturer/CourseController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/student/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/student/CourseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/student/CreationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/student/CreationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/course/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/course/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/creation/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/creation/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/student/creation/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/creation/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/student/creation/delete.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/student/creation/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/creation/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/student/inc/navbar.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/student/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/student/profile/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/profile/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Course_year_lecturer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Course_year_lecturer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/lecturer/course/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lecturer/course/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/student/course/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/course/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/student/course/update.blade.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +173,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/student" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/student/course" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -192,6 +186,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\UAS\UCreationWeb\resources\views\student\course" />
+      <recent name="C:\xampp\htdocs\UAS\UCreationWeb\resources\views\lecturer\course" />
       <recent name="C:\xampp\htdocs\UAS\UCreationWeb\resources\views\student" />
     </key>
   </component>

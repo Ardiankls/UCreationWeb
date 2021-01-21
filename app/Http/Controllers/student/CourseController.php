@@ -19,8 +19,8 @@ class CourseController extends Controller
     {
 
         $pages = 'course';
-        $courses = Course_year::all();
-        return view('student.course.list', compact('courses', 'pages'));
+        $courses = course_year_lecturer::all();
+        return view('student.course.index', compact('courses', 'pages'));
 
     }
 
