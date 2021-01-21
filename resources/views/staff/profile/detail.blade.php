@@ -24,9 +24,9 @@
                 <div class="row">
                     <div class="col-sm-5" style="">
 
-                                            <img  class=" shadow rounded-3 mx-auto "  src="img/blankprofile.png" style="width: 20em; height: 20em; margin-left: 5em;" >
+                                            <img  class=" shadow rounded-3"  src="img/blankprofile.png" style="width: 18em; height: 18em; margin-left: 20em" >
                     </div>
-                    <div class="col-sm-7 mx-auto" style="color: white;margin-top: 10em">
+                    <div class="col-sm-4 text-center " style="color: white; position: center ;padding-top: 20em; margin-left: -5em">
                         {{--                        <p>Name</p>--}}
                         {{--                        <p>NIM</p>--}}
                         {{--                        <p>Department</p>--}}
