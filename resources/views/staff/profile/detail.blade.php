@@ -20,11 +20,11 @@
         }
     </style>
     <div class="container-fluid " >
-            <div class="col-sm-11  shadow p-5 m-5 rounded-3" style="background-color: white; color: #979BFF">
+            <div class="col-sm-11  shadow p-5 m-5 rounded-3" style="background-image: linear-gradient(to right top, #e1b6ff, #d4b2ff, #c5aeff, #b5aaff, #a4a7ff, #969fff, #8697ff, #748fff, #6480ff, #5470ff, #4460ff, #364eff);;margin-top: 20em; color: #ffffff">
                 <div class="row">
                     <div class="col-sm-5" style="">
 
-                        {{--                    <img  class=" shadow rounded-3 "  src="img/blankprofile.png" style="width: 4em; height: 4em; margin-top: -4em; margin-right: 1em" >--}}
+                                            <img  class=" shadow rounded-3 "  src="img/blankprofile.png" style="width: 20em; height: 20em; margin-left: 30em" >
                     </div>
                     <div class="col-sm-7" style="color: #979BFF">
                         {{--                        <p>Name</p>--}}
