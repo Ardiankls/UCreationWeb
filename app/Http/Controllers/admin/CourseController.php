@@ -96,6 +96,7 @@ class CourseController extends Controller
         //
         $pages = 'course';
 
+
         $course = Course::create([
             'name' => $request['name_course'],
             'date'=>'',
@@ -106,6 +107,15 @@ class CourseController extends Controller
             'ucr_year_id' => $request['course_period'],
             'ucr_course_id' => $course->id,
         ]);
+//        $cyl = Course_year_lecturer::create([
+//            'ucr_course_year_id' => $cy->id,
+//            'ucr_user_id' => $request['course_lecturer'],
+//        ]);
+        if('count'== 1){
+            $cyl = Course_year_lecturer::create([
+                'ucr_course_year_id' => $cy->id,
+                'ucr_user_id' => $request['course_lecturer1'],]);
+        }
         for ($i = 1; $i <= $request['count'];$i++){
 
 //
@@ -166,7 +176,7 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Course $course)
+    public function edit(course_year_lecturer $course)
     {
         //
         $pages = 'course';
@@ -183,12 +193,15 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
-    public function update( course_year_lecturer $course)
+    public function update( Request $request,  course_year_lecturer $course)
     {
         //
-        $course->update();
-        $course->lecturer->update();
-        $course->lecturer->courses->update();
+        $course->update($request->all());
+        $course = department::updated([
+            'name'=>$request['course_department'],
+        ]);
+//        $course->lecturer->update($request->all());
+//        $course->lecturer->courses->update($request->all());
 //        $course->update($request->all());
 
 //        return redirect()->route('admin.course.update');
