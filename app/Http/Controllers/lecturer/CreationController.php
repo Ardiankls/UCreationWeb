@@ -4,6 +4,7 @@ namespace App\Http\Controllers\lecturer;
 
 use App\Http\Controllers\Controller;
 use App\Models\Creation;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class CreationController extends Controller
@@ -50,9 +51,13 @@ class CreationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Creation $creation)
     {
-        //
+        $pages = 'creation';
+        $students = User::where('role_id', '=', 1)
+            ->get();
+//        $user = User::all();
+        return view('lecturer.creation.detail', compact('pages', 'creation', 'students'));
     }
 
     /**

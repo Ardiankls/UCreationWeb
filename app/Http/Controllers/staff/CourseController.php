@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\staff;
 
 use App\Http\Controllers\Controller;
+use App\Models\course_year_lecturer;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -14,7 +15,11 @@ class CourseController extends Controller
      */
     public function index()
     {
-        //
+        {
+            $courses = course_year_lecturer::all();
+            $pages = 'course';
+            return view('staff.course.list', compact('courses', 'pages'));
+        }
     }
 
     /**
@@ -78,8 +83,11 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(course_year_staff $course)
     {
-        //
+        {
+            $course->delete();
+            return redirect()->back();
+        }
     }
 }
