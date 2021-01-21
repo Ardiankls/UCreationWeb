@@ -197,9 +197,10 @@ class CourseController extends Controller
     {
         //
         $course->update($request->all());
-        $course = department::updated([
-            'name'=>$request['course_department'],
-        ]);
+        
+//        $course = department::update([
+//            'name'=>$request['course_department'],
+//        ]);
 //        $course->lecturer->update($request->all());
 //        $course->lecturer->courses->update($request->all());
 //        $course->update($request->all());
@@ -207,6 +208,8 @@ class CourseController extends Controller
 //        return redirect()->route('admin.course.update');
         return redirect()->route('admin.course.index');
     }
+
+
 
     /**
      * Remove the specified resource from storage.

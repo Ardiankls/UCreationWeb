@@ -27,6 +27,7 @@
                         <td>{{ $course->lecturer->courses->name}}</td>
                         <td>{{ $course->lecturer->courses->depart->initial}}</td>
                         @foreach($course->lecturer->courses->years as $yearss)<td>{{$yearss->year }}</td>@endforeach
+{{--                        <td>{{dd($course->lecturer->courses->years)}}</td>--}}
                         <td>{{$course->teach->name}}</td>
                         @auth
                             <td class="d-flex">
