@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="BranchesTreeState">
     <expand>
@@ -22,6 +37,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="4f926e0b-4d8a-421e-a421-57a36b887e24" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/lecturer/CreationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/lecturer/CreationController.php" afterDir="false" />
@@ -29,6 +45,17 @@
       <change beforePath="$PROJECT_DIR$/resources/views/staff/creation/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/staff/creation/detail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/staff/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/staff/index.blade.php" afterDir="false" />
     </list>
+||||||| 146f528
+    <list default="true" id="4f926e0b-4d8a-421e-a421-57a36b887e24" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="4f926e0b-4d8a-421e-a421-57a36b887e24" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/lecturer/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/lecturer/CourseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/lecturer/CreationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/lecturer/CreationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/lecturer/course/details/creation_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lecturer/course/details/creation_list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/lecturer/course/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lecturer/course/list.blade.php" afterDir="false" />
+    </list>
+>>>>>>> lecturer
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,9 +63,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable path="composer" />
-    </execution>
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -175,12 +200,25 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/staff/creation" />
+||||||| 146f528
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/lecturer/course" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+>>>>>>> lecturer
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+<<<<<<< HEAD
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\UCreationWeb\resources\views\staff\creation" />
       <recent name="C:\xampp\htdocs\UCreationWeb\resources\views\staff" />
@@ -190,6 +228,18 @@
       <recent name="D:\xampp\htdocs\UCreation\resources\views\student" />
       <recent name="D:\xampp\htdocs\UCreation\resources\views\student\creation" />
       <recent name="D:\xampp\htdocs\UCreation\resources\views\layouts" />
+||||||| 146f528
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\UCreation\resources\views\student" />
+      <recent name="D:\xampp\htdocs\UCreation\resources\views\student\creation" />
+      <recent name="D:\xampp\htdocs\UCreation\resources\views\layouts" />
+=======
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\UAS\UCreationWeb\resources\views\lecturer\course" />
+      <recent name="C:\xampp\htdocs\UAS\UCreationWeb\resources\views\lecturer" />
+      <recent name="C:\xampp\htdocs\UAS\UCreationWeb\resources\views\student\course" />
+      <recent name="C:\xampp\htdocs\UAS\UCreationWeb\resources\views\student" />
+>>>>>>> lecturer
     </key>
   </component>
   <component name="RunManager">
@@ -212,57 +262,14 @@
       <workItem from="1607579780254" duration="6992000" />
       <workItem from="1607619045351" duration="6293000" />
       <workItem from="1607708312361" duration="5251000" />
-      <workItem from="1607759694547" duration="9427000" />
-      <workItem from="1607784101378" duration="605000" />
-      <workItem from="1607796436257" duration="2970000" />
-      <workItem from="1607843276649" duration="2021000" />
-      <workItem from="1607874136576" duration="11394000" />
-      <workItem from="1607954472843" duration="45000" />
-      <workItem from="1607954592067" duration="85000" />
-      <workItem from="1607954702067" duration="11899000" />
-      <workItem from="1608053306289" duration="4973000" />
-      <workItem from="1608113640685" duration="22051000" />
-      <workItem from="1608252292520" duration="5265000" />
-      <workItem from="1608363807418" duration="1483000" />
-      <workItem from="1608377406432" duration="106000" />
-      <workItem from="1608380620127" duration="17358000" />
-      <workItem from="1608449546427" duration="5365000" />
-      <workItem from="1608629039045" duration="1193000" />
-      <workItem from="1608643347401" duration="13933000" />
-      <workItem from="1608724432353" duration="7043000" />
-      <workItem from="1608753144465" duration="2128000" />
-      <workItem from="1608793005654" duration="9669000" />
-      <workItem from="1608862167290" duration="35947000" />
-      <workItem from="1608979110894" duration="8969000" />
-      <workItem from="1608999187628" duration="80923000" />
-      <workItem from="1609328987219" duration="52352000" />
-      <workItem from="1609563629095" duration="3303000" />
-      <workItem from="1609696034671" duration="3858000" />
-      <workItem from="1609776016314" duration="4206000" />
-      <workItem from="1610169924856" duration="22919000" />
-      <workItem from="1610286174775" duration="9497000" />
-      <workItem from="1610327717254" duration="10657000" />
-      <workItem from="1610386965248" duration="41763000" />
-      <workItem from="1610736259875" duration="13797000" />
-      <workItem from="1610773126525" duration="54500000" />
-      <workItem from="1610995508157" duration="341000" />
-      <workItem from="1610995905111" duration="1490000" />
-      <workItem from="1610997587550" duration="62000" />
-      <workItem from="1610997694602" duration="49080000" />
-      <workItem from="1611133079952" duration="7202000" />
-      <workItem from="1611140982565" duration="376000" />
-      <workItem from="1611206658549" duration="1046000" />
-      <workItem from="1611219686130" duration="733000" />
-      <workItem from="1611221011679" duration="624000" />
-      <workItem from="1611221758087" duration="9332000" />
-      <workItem from="1611242603325" duration="1895000" />
-      <workItem from="1611244702888" duration="22012000" />
+      <workItem from="1607759694547" duration="4690000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+<<<<<<< HEAD
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -275,22 +282,33 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+||||||| 146f528
+=======
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+>>>>>>> lecturer
   <component name="WindowStateProjectService">
-    <state x="137" y="49" key="#Plugins" timestamp="1610995852128">
+    <state x="413" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607654265454">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="137" y="49" key="#Plugins/0.0.1366.768@0.0.1366.768" timestamp="1610995852128" />
-    <state x="423" y="174" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610188769348">
+    <state x="413" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.768@0.0.1366.768" timestamp="1607654265454" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611258873083">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1611258873083" />
+    <state x="184" y="29" key="SettingsEditor" timestamp="1607768479927">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="423" y="174" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1610188769348" />
-    <state x="363" y="120" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1611076869489">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state x="363" y="120" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.768@0.0.1366.768" timestamp="1611076869489" />
-    <state x="413" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610894377701">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <state x="413" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.768@0.0.1366.768" timestamp="1607654265454" />
     <state x="580" y="188" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610550246616">
@@ -301,8 +319,16 @@
 =======
     <state x="413" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.768@0.0.1366.768" timestamp="1610894377701" />
     <state x="413" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611133941199">
+||||||| 146f528
+    <state x="413" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.768@0.0.1366.768" timestamp="1610894377701" />
+    <state x="413" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611133941199">
+=======
+    <state x="184" y="29" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1607768479927" />
+    <state x="0" y="144" width="583" height="624" key="find.popup" timestamp="1607648365137">
+>>>>>>> lecturer
       <screen x="0" y="0" width="1366" height="768" />
     </state>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <state x="413" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.768@0.0.1366.768" timestamp="1611133941199" />
 ||||||| e46e3d8
@@ -347,28 +373,54 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="0" y="144" width="583" height="624" key="find.popup/0.0.1366.768@0.0.1366.768" timestamp="1611265922512" />
+||||||| 146f528
+    <state x="413" y="139" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.768@0.0.1366.768" timestamp="1611133941199" />
+    <state x="446" y="294" key="ComposerInitDialogKey" timestamp="1608159271713">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="446" y="294" key="ComposerInitDialogKey/0.0.1366.768@0.0.1366.768" timestamp="1608159271713" />
+    <state width="1323" height="185" key="GridCell.Tab.0.bottom" timestamp="1608192723881">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="185" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1608192723880" />
+    <state width="1323" height="185" key="GridCell.Tab.0.center" timestamp="1608192723876">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="185" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1608192723876" />
+    <state width="1323" height="185" key="GridCell.Tab.0.left" timestamp="1608192723853">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="185" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1608192723853" />
+    <state width="1323" height="185" key="GridCell.Tab.0.right" timestamp="1608192723877">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="185" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1608192723877" />
+    <state x="499" y="91" key="NewPhpClassDialog" timestamp="1609194195214">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="499" y="91" key="NewPhpClassDialog/0.0.1366.768@0.0.1366.768" timestamp="1609194195214" />
+    <state x="273" y="55" width="1093" height="710" key="SettingsEditor" timestamp="1611221700158">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="273" y="55" width="1093" height="710" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1611221700158" />
+    <state x="500" y="294" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610479935904">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="500" y="294" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.768@0.0.1366.768" timestamp="1610479935904" />
+    <state x="0" y="144" width="583" height="624" key="find.popup" timestamp="1611265922512">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="0" y="144" width="583" height="624" key="find.popup/0.0.1366.768@0.0.1366.768" timestamp="1611265922512" />
+=======
+    <state x="0" y="144" width="583" height="624" key="find.popup/0.0.1366.768@0.0.1366.768" timestamp="1607648365137" />
+>>>>>>> lecturer
     <state x="324" y="109" width="700" height="530" key="recent.locations.popup" timestamp="1607648364920">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="324" y="109" width="700" height="530" key="recent.locations.popup/0.0.1366.768@0.0.1366.768" timestamp="1607648364920" />
-    <state x="335" y="210" key="run.anything.popup" timestamp="1610870095002">
+    <state x="335" y="210" key="run.anything.popup" timestamp="1607489280045">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="335" y="210" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1610870095002" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1611130846576">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1611130846576" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/resources/views/admin/profile/detail.blade.php</url>
-          <line>77</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="335" y="210" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1607489280045" />
   </component>
 </project>

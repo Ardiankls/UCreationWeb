@@ -10,6 +10,7 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+<<<<<<< HEAD
 .idea/workspace.xml
 public/image/creation/cac621ce2906beef5c46fc26ff1a1182.jpg-1610514772.jpg
 *.jpg
@@ -24,3 +25,19 @@ public/image/creation/cac621ce2906beef5c46fc26ff1a1182.jpg-1610514772.jpg
 .idea/workspace.xml
 .idea/workspace.xml
 .idea/workspace.xml
+||||||| 146f528
+.idea/workspace.xml
+public/image/creation/cac621ce2906beef5c46fc26ff1a1182.jpg-1610514772.jpg
+*.jpg
+.idea/workspace.xml
+.idea/workspace.xml
+.idea/workspace.xml
+.idea/workspace.xml
+.idea/workspace.xml
+*.png
+*.jpg
+.idea/workspace.xml
+.idea/workspace.xml
+.idea/workspace.xml
+=======
+>>>>>>> lecturer

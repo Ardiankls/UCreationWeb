@@ -112,6 +112,8 @@ Route::group(['middleware' => ['lecturer'], 'prefix' => 'lecturer', 'as' => 'lec
     Route::resource('staff', LecturerStaffController::class);
     Route::resource('student', LecturerStudentController::class);
     Route::resource('user', LecturerUserController::class);
+    Route::post('creations/{id}/approved',[LecturerCourseController::class,'approve'])->name('creations.approve');
+    Route::post('creations/{id}/reject',[LecturerCourseController::class,'reject'])->name('creations.reject');
 });
 
 Route::group(['middleware' => ['staff'], 'prefix' => 'staff', 'as' => 'staff.'], function () {

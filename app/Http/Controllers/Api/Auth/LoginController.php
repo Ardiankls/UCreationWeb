@@ -77,20 +77,18 @@ class LoginController extends Controller
         }
 
     }
-    public function logout()
-    {
+    public function logout(){
         $user = Auth::user();
-        $accesstoken = Auth::user()->token();
-        DB::table('oauth_refresh_tokens')->where('access_token_id', $accesstoken->id)->update(['revoked' => true]);
-
+        $accessToken = Auth::user()->token();
+        DB::table('oauth_refresh_tokens')
+            ->where('access_token_id', $accessToken->id)
+            ->update(['revoked' => true]);
         $user->update([
             'is_login' => '0',
         ]);
-
-        $accesstoken->revoke();
-
+        $accessToken->revoke();
         return response([
-            'message' => 'Logged Out.'
+            'message' => 'Logged Out',
         ]);
     }
         private function is_login(int $id)

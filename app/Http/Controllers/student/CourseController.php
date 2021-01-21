@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\student;
 
 use App\Http\Controllers\Controller;
+use App\Models\Course_year;
+use App\Models\course_year_lecturer;
+use App\Models\Creation;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -14,7 +17,11 @@ class CourseController extends Controller
      */
     public function index()
     {
-        //
+
+        $pages = 'course';
+        $courses = course_year_lecturer::all();
+        return view('student.course.index', compact('courses', 'pages'));
+
     }
 
     /**
@@ -46,7 +53,12 @@ class CourseController extends Controller
      */
     public function show($id)
     {
-        //
+//        $pages = 'course';
+//
+//        $course =course_year_lecturer::findOrFail($id);
+//        $creations = Creation::where('ucr_course_year_id',$id)->get();
+//        $lecturers = course_year_lecturer::where('ucr_course_year_id',$id)->get();
+//        return view('student.course.list', compact('pages', 'course', 'creations','lecturers'));
     }
 
     /**
