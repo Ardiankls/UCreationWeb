@@ -20,7 +20,7 @@ class UserController extends Controller
 
 
 
-        
+        return view('staff.profile.detail',);
 
 
     }
