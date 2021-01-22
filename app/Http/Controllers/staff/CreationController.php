@@ -4,6 +4,7 @@ namespace App\Http\Controllers\staff;
 
 use App\Http\Controllers\Controller;
 use App\Models\Creation;
+use App\Models\Creation_user;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -49,13 +50,25 @@ class CreationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Creation $creation)
+    public function show($id)
     {
         $pages = 'creation';
-        $students = User::where('role_id', '=', 1)
-            ->get();
-//        $user = User::all();
-        return view('staff.creation.detail', compact('pages', 'creation', 'students'));
+
+        //another way
+//        $creations = Creation::all();
+//        foreach($creations as $creation)
+        $creation = Creation::findOrFail($id);
+        $creators = Creation_user::where('ucr_creation_id',$id)->get();
+
+//        $creators = User::where('id',$creatoruser)->get();
+//                dd($creators);
+//        $creators = Creation::where('created_by', $creation->id);
+
+//        $creatoruser = User::where('id','=',$creators)->get();
+//        $creatoruser = User::whereHas('creates', function ($querry) use ($creators) {
+//            $querry->whereIn('id', $creators)->get();
+//        });
+        return view('staff.creation.detail', compact('pages', 'creation', 'creators'));
     }
 
     /**

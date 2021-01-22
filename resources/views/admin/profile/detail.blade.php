@@ -21,13 +21,13 @@
     </style>
     <div class="container-fluid " >
         <div class="row">
-            <div class="col-sm-4 shadow p-5 m-5 rounded-3" style="background-color: white; color: #979BFF;">
-                <div class="row" style=" height: 100%">
-                    <h1 class="text-center " style=" font-size: 8em">5</h1>
-                    <h2 class="text-center mx-auto" style="">Total Project</h2>
-                </div>
-            </div>
-            <div class="col-sm-6 shadow p-5 m-5 rounded-3" style="background-color: white; color: #979BFF">
+{{--            <div class="col-sm-4 shadow p-5 m-5 rounded-3" style="background-color: white; color: #979BFF;">--}}
+{{--                <div class="row" style=" height: 100%">--}}
+{{--                    <h1 class="text-center " style=" font-size: 8em">5</h1>--}}
+{{--                    <h2 class="text-center mx-auto" style="">Total Project</h2>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+            <div class="col-sm-6 shadow p-5 m-5 rounded-3 mx-auto" style="background-color: white; color: #979BFF">
                 <div class="row">
                     <div class="col-sm-5" style="">
                         <picture >

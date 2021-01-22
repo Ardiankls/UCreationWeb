@@ -80,7 +80,7 @@ class CreationController extends Controller
 
         }
 
-        return redirect()->route('student.creation.list');
+        return redirect()->route('student.creation.index');
     }
 
     /**

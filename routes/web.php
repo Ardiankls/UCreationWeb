@@ -146,6 +146,7 @@ Route::group(['middleware' => ['student'], 'prefix' => 'student', 'as' => 'stude
 Route::group(['middleware' => 'auth:api'], function (){
     Route::apiResource('creations', CreationControllerApi::class);
 });
+Route::view('/about', 'admin.about')->name('about');
 //Route::resource('creation', \App\Http\Controllers\CreationController::class);
 //Route::view('create', 'student.creation.create')->name('createCreation');
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
