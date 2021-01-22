@@ -107,7 +107,7 @@ class UserSeeder extends Seeder
         $user->email = 'budi@student.com';
         $user->password = Hash::make('passwordstudent2');
         $user->role_id = 1;
-        $user->detailable_id= 1;
+        $user->detailable_id= 2;
         $user->detailable_type= 'App\Models\Student';
         $user->save();
         //

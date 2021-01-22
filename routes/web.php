@@ -112,6 +112,8 @@ Route::group(['middleware' => ['lecturer'], 'prefix' => 'lecturer', 'as' => 'lec
     Route::resource('staff', LecturerStaffController::class);
     Route::resource('student', LecturerStudentController::class);
     Route::resource('user', LecturerUserController::class);
+    Route::post('creations/{id}/approved',[LecturerCourseController::class,'approve'])->name('creations.approve');
+    Route::post('creations/{id}/reject',[LecturerCourseController::class,'reject'])->name('creations.reject');
 });
 
 Route::group(['middleware' => ['staff'], 'prefix' => 'staff', 'as' => 'staff.'], function () {
@@ -144,6 +146,7 @@ Route::group(['middleware' => ['student'], 'prefix' => 'student', 'as' => 'stude
 Route::group(['middleware' => 'auth:api'], function (){
     Route::apiResource('creations', CreationControllerApi::class);
 });
+Route::view('/about', 'admin.about')->name('about');
 //Route::resource('creation', \App\Http\Controllers\CreationController::class);
 //Route::view('create', 'student.creation.create')->name('createCreation');
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

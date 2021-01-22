@@ -19,17 +19,14 @@
         <a class="nav-link " style="color: white;" href="{{ route('admin.creation.create') }}">Upload Project</a>
     </li>
     <li class="nav-item btn  " style="background-color: #7965FF; margin-right: 1em ">
-        <a class="nav-link " style="color: white;" href="{{ route('admin.course.create') }}">Add Course</a>
-    </li>
-    <li class="nav-item btn  " style="background-color: #7965FF; margin-right: 1em ">
         <a class="nav-link " style="color: white;" href="{{ route('admin.course.index') }}">Course List</a>
     </li>
 {{--    <li class="nav-item btn  " style="background-color: #7965FF; margin-right: 1em ">--}}
 {{--        <a class="nav-link " style="color: white;" href="{{ route('admin.course.index') }}">Creation List</a>--}}
 {{--    </li>--}}
-    <li class="nav-item btn   " style="background-color: #7965FF; margin-right: 1em ">
-        <a class="nav-link"  style="color: white;" href="#">About</a>
-    </li>
+{{--    <li class="nav-item btn   " style="background-color: #7965FF; margin-right: 1em ">--}}
+{{--        <a class="nav-link"  style="color: white;" href="{{ route('admin.about')}}">About</a>--}}
+{{--    </li>--}}
 
 </ul>
 @endif
@@ -41,13 +38,12 @@
     </li>
 
     <li class="nav-item btn  " style="background-color: #7965FF; margin-right: 1em ">
-        <a class="nav-link " style="color: white;" href="{{ route('lecturer.course.create') }}">Course List</a>
+        <a class="nav-link " style="color: white;" href="{{ route('lecturer.course.index') }}">Course List</a>
     </li>
 
-    <li class="nav-item btn   " style="background-color: #7965FF; margin-right: 1em ">
-        <a class="nav-link"  style="color: white;" href="#">About</a>
-    </li>
-
+{{--    <li class="nav-item btn   " style="background-color: #7965FF; margin-right: 1em ">--}}
+{{--        <a class="nav-link"  style="color: white;" href="{{ route('about')}}">About</a>--}}
+{{--    </li>--}}
 </ul>
 @endif
 
@@ -57,9 +53,13 @@
             <a class="nav-link active" aria-current="page" href="{{ route('staff.creation.index') }}" style="color: white; ">Project List</a>
         </li>
 
-        <li class="nav-item btn   " style="background-color: #7965FF; margin-right: 1em ">
-            <a class="nav-link"  style="color: white;" href="#">About</a>
+        <li class="nav-item btn  " style="background-color: #7965FF; margin-right: 1em ">
+            <a class="nav-link " style="color: white;" href="{{ route('staff.course.index') }}">Course List</a>
         </li>
+
+{{--        <li class="nav-item btn   " style="background-color: #7965FF; margin-right: 1em ">--}}
+{{--            <a class="nav-link"  style="color: white;" href="{{ route('about')}}">About</a>--}}
+{{--        </li>--}}
 
     </ul>
 @endif
@@ -73,10 +73,12 @@
         <li class="nav-item btn  " style="background-color: #7965FF; margin-right: 1em ">
             <a class="nav-link " style="color: white;" href="{{ route('student.creation.create') }}">Upload Project</a>
         </li>
-
-        <li class="nav-item btn   " style="background-color: #7965FF; margin-right: 1em ">
-            <a class="nav-link"  style="color: white;" href="#">About</a>
+        <li class="nav-item btn  " style="background-color: #7965FF; margin-right: 1em ">
+            <a class="nav-link " style="color: white;" href="{{ route('student.course.index') }}">Course List</a>
         </li>
+{{--        <li class="nav-item btn   " style="background-color: #7965FF; margin-right: 1em ">--}}
+{{--            <a class="nav-link"  style="color: white;" href="{{ route('about')}}">About</a>--}}
+{{--        </li>--}}
 
     </ul>
 @endif

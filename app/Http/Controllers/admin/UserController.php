@@ -29,7 +29,7 @@ class UserController extends Controller
             $query->where('ucr_user_id', Auth::id());
         })->get()
         ;
-        dd($creations);
+//        dd($creations);
 //        foreach ( $creations as $creation) {
 //            $creation;
 //        }
@@ -69,10 +69,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
         //
-
+//        return view('admin.about');
     }
 
     /**

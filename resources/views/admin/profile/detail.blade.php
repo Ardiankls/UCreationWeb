@@ -21,17 +21,17 @@
     </style>
     <div class="container-fluid " >
         <div class="row">
-            <div class="col-sm-4 shadow p-5 m-5 rounded-3" style="background-color: white; color: #979BFF;">
-                <div class="row" style=" height: 100%">
-                    <h1 class="text-center " style=" font-size: 8em">5</h1>
-                    <h2 class="text-center mx-auto" style="">Total Project</h2>
-                </div>
-            </div>
-            <div class="col-sm-6 shadow p-5 m-5 rounded-3" style="background-color: white; color: #979BFF">
+{{--            <div class="col-sm-4 shadow p-5 m-5 rounded-3" style="background-color: white; color: #979BFF;">--}}
+{{--                <div class="row" style=" height: 100%">--}}
+{{--                    <h1 class="text-center " style=" font-size: 8em">5</h1>--}}
+{{--                    <h2 class="text-center mx-auto" style="">Total Project</h2>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+            <div class="col-sm-6 shadow p-5 m-5 rounded-3 mx-auto" style="background-color: white; color: #979BFF">
                 <div class="row">
                     <div class="col-sm-5" style="">
                         <picture >
-                            <img src="img/blankprofile.png" class="img-fluid rounded-3 shadow-sm">
+                            <img src="" class="img-fluid rounded-3 shadow-sm">
                         </picture>
                         {{--                    <img  class=" shadow rounded-3 "  src="img/blankprofile.png" style="width: 4em; height: 4em; margin-top: -4em; margin-right: 1em" >--}}
                     </div>
@@ -40,14 +40,14 @@
 {{--                        <p>NIM</p>--}}
 {{--                        <p>Department</p>--}}
 {{--                        <p>Batch</p>--}}
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->nip}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->name}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->email}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->gender}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->phone}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->line_account}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->department->name}}</p>
-                        <p>{{\Illuminate\Support\Facades\Auth::user()->detailable->title->name}}</p>
+                        <p>NIP     : {{\Illuminate\Support\Facades\Auth::user()->detailable->nip}}</p>
+                        <p>Name    : {{\Illuminate\Support\Facades\Auth::user()->detailable->name}}</p>
+                        <p>Email   : {{\Illuminate\Support\Facades\Auth::user()->detailable->email}}</p>
+                        <p>Gender  : {{\Illuminate\Support\Facades\Auth::user()->detailable->gender}}</p>
+                        <p>Phone   : {{\Illuminate\Support\Facades\Auth::user()->detailable->phone}}</p>
+                        <p>Line    : {{\Illuminate\Support\Facades\Auth::user()->detailable->line_account}}</p>
+                        <p>Department : {{\Illuminate\Support\Facades\Auth::user()->detailable->department->name}}</p>
+                        <p>Title   : {{\Illuminate\Support\Facades\Auth::user()->detailable->title->name}}</p>
 
 
                     </div>
@@ -97,7 +97,7 @@
                         @csrf
                         <a class="" href="{{ route('admin.creation.show', $creation->id) }}">
                             <div class="card-view bg-white shadow "  style="width: 200px; height: 267px; margin-top: 50px; border-radius: 15px;">
-                                <img src="/image/creation/{{$creation->picture}}" class="card-img-top" style="padding: 2px ;margin: 0 auto; height: 155px; margin-top: 10px; border-radius: 15px;">
+                                <img src="{{asset('image/creation/'.$creation->picture)}}" class="card-img-top" style="padding: 2px ;margin: 0 auto; height: 155px; margin-top: 10px; border-radius: 15px;">
                                 <h1 class="title mx-auto text-center p-1 fs-5 font-weight-bold" style="color: #979BFF">{{$creation->name}}</h1>
 {{--                                <p class="proj-shortdesc mx-auto text-center     p-2 fs-6" style="color: #979BFF"> {{$creation->status}}</p>--}}
                                 @if($creation->status == 0) <p class="proj-shortdesc mx-auto text-center p-2 fs-6 text-warning">Pending</p>

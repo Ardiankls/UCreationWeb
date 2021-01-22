@@ -4,9 +4,9 @@
         <div class="row ">
             <div class="sort mt-5" style="color: #979BFF" >
                 <div class="dropdown">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                        Sort By
-                    </a>
+{{--                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">--}}
+{{--                        Sort By--}}
+{{--                    </a>--}}
 
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                         <li><a class="dropdown-item" href="#">Action</a></li>

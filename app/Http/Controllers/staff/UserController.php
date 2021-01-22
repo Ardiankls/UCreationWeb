@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\staff;
 
 use App\Http\Controllers\Controller;
+use App\Models\Creation;
+use App\Models\Creation_user;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -14,8 +17,14 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+
+
+
+        return view('staff.profile.detail',);
+
+
     }
+
 
     /**
      * Show the form for creating a new resource.
