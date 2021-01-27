@@ -29,7 +29,7 @@ class Staff extends Model
     public function staff(){
         return $this->belongsTo(Title::class, 'title', 'id');
     }
-    public function user(){
+    public function users(){
         return $this->morphMany('App\Models\User', 'detailable');
     }
     public function department(){

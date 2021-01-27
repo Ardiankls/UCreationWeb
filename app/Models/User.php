@@ -25,7 +25,7 @@ class User extends Authenticatable
         'password',
         'is_login',
         'detailabe_id',
-        'detialable_type',
+        'detailable_type',
 
     ];
 

@@ -59,6 +59,21 @@ class LecturerSeeder extends Seeder
         $lecturer->title_id = '2';
         $lecturer->jaka_id = '1';
         $lecturer->save();
+
+        $lecturer =new Lecturer();
+        $lecturer->nip = '4213';
+        $lecturer->nidn = '53414';
+        $lecturer->name = 'budi';
+        $lecturer->email = 'budi@lecturer.com';
+        $lecturer->description= '';
+        $lecturer->photo ='' ;
+        $lecturer->gender = 'M';
+        $lecturer->phone = '0312456';
+        $lecturer->line_account = 'fjanuar';
+        $lecturer->department_id = '8';
+        $lecturer->title_id = '2';
+        $lecturer->jaka_id = '1';
+        $lecturer->save();
     }
 
 

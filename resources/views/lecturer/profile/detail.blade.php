@@ -21,23 +21,14 @@
     </style>
     <div class="container-fluid " >
         <div class="row">
-            <div class="col-sm-4 shadow p-5 m-5 rounded-3" style="background-color: white; color: #979BFF;">
-                <div class="row" style=" height: 100%">
-                    <h1 class="text-center " style=" font-size: 8em">5</h1>
-                    <h2 class="text-center mx-auto" style="">Total Project</h2>
-                </div>
-            </div>
-            <div class="col-sm-6 shadow p-5 m-5 rounded-3" style="background-color: white; color: #979BFF">
+            <div class="col-sm-6 shadow p-5 m-5 rounded-3 mx-auto" style="background-color: white; color: #979BFF">
                 <div class="row">
-                    <div class="col-sm-5" style="">
-                        <picture >
-                            <img src="img/blankprofile.png" class="img-fluid rounded-3 shadow-sm">
-                        </picture>
-                    </div>
-                    <div class="col-sm-7" style="color: #979BFF">
+                    <div class="col-sm" style="color: #979BFF">
                         <p>NIP     : {{\Illuminate\Support\Facades\Auth::user()->detailable->nip}}</p>
                         <p>Name    : {{\Illuminate\Support\Facades\Auth::user()->detailable->name}}</p>
                         <p>Email   :{{\Illuminate\Support\Facades\Auth::user()->detailable->email}}</p>
+                    </div>
+                    <div class="col-sm" style="color: #979BFF">
                         <p>Gender  :{{\Illuminate\Support\Facades\Auth::user()->detailable->gender}}</p>
                         <p>Phone   :{{\Illuminate\Support\Facades\Auth::user()->detailable->phone}}</p>
                         <p>Line :{{\Illuminate\Support\Facades\Auth::user()->detailable->line_account}}</p>

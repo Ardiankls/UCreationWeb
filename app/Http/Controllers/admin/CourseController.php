@@ -111,23 +111,26 @@ class CourseController extends Controller
 //            'ucr_course_year_id' => $cy->id,
 //            'ucr_user_id' => $request['course_lecturer'],
 //        ]);
-        if('count'== 1){
+        if($request['count'] == null){
             $cyl = Course_year_lecturer::create([
                 'ucr_course_year_id' => $cy->id,
                 'ucr_user_id' => $request['course_lecturer1'],]);
         }
-        for ($i = 1; $i <= $request['count'];$i++){
 
+
+        for ($i = 1; $i <= $request['count'];$i++){
 //
             $cyl = Course_year_lecturer::create([
                 'ucr_course_year_id' => $cy->id,
                 'ucr_user_id' => $request['course_lecturer'.$i],
-            ]);
-        }
 
+            ]);
+
+        }
 
 //        $teach = Auth::Course_year_lecturer()->teaches()->syncWithoutDetaching($request->ucr_course_year_lecturer_id,['couse_year']);
 //        $lect = Auth::Course_year_lecturer()->lect()->syncWithoutDetaching($request->ucr_course_year_lecturer_id,['couse_year']);
+
         return redirect()->route('admin.course.index');
     }
 

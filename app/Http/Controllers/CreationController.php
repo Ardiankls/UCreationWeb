@@ -16,8 +16,11 @@ class CreationController extends Controller
     {
         //
         $pages = 'guest';
-        $creation = creation::all();
-        return view('index', compact('creation', 'pages'));
+        $creation = creation::where('status', '1')->get();
+
+        return view('admin.index', compact('creation', 'pages'));
+
+
 
 
     }

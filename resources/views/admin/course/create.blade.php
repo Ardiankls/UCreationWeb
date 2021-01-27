@@ -66,6 +66,7 @@
     <script>
         $(document).ready(function(){
             var i=1;
+
             $('#add').click(function(){
                 i++;
                 document.getElementById('count').value = i;

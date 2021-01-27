@@ -90,9 +90,6 @@ class UserSeeder extends Seeder
         $user->save();
 
 
-
-
-
         $user =new User();
         $user->name = 'fadhel';
         $user->email = 'fadhel@student.com';
